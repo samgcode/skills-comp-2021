@@ -22,10 +22,10 @@
                         </router-link>
                         <div class="hidden sm:block sm:ml-6">
                             <div class="flex space-x-4">
-                                <router-link :to="{ name: 'Home' }" class="bg-gray-800 hover:bg-gray-700 active:bg-gray-500 text-white px-3 py-2 rounded-md text-base font-medium">Home</router-link>
-                                <router-link :to="{ name: 'Store' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 px-3 py-2 rounded-md text-base font-medium">Store</router-link>
-                                <router-link :to="{ name: 'Contact' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 px-3 py-2 rounded-md text-base font-medium">Contact Us</router-link>
-                                <router-link :to="{ name: 'About' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 px-3 py-2 rounded-md text-base font-medium">About Us</router-link>
+                                <router-link :to="{ name: 'Home' }" class="nav-link-primary">Home</router-link>
+                                <router-link :to="{ name: 'Store' }" class="nav-link">Store</router-link>
+                                <router-link :to="{ name: 'Contact' }" class="nav-link">Contact Us</router-link>
+                                <router-link :to="{ name: 'About' }" class="nav-link">About Us</router-link>
                             </div>
                         </div>
                     </div>
@@ -34,10 +34,10 @@
 
             <div class="sm:hidden text-white" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
-                    <router-link :to="{ name: 'Home' }" class="bg-gray-900 hover:bg-gray-700 active:bg-gray-500 text-white block px-3 py-2 rounded-md text-base font-medium">Home</router-link>
-                    <router-link :to="{ name: 'Store' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 block px-3 py-2 rounded-md text-base font-medium">Store</router-link>
-                    <router-link :to="{ name: 'Contact' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 block px-3 py-2 rounded-md text-base font-medium">Contact Us</router-link>
-                    <router-link :to="{ name: 'About' }" class="text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 block px-3 py-2 rounded-md text-base font-medium">About Us</router-link>
+                    <router-link :to="{ name: 'Home' }" class="nav-link-primary block">Home</router-link>
+                    <router-link :to="{ name: 'Store' }" class="nav-link block">Store</router-link>
+                    <router-link :to="{ name: 'Contact' }" class="nav-link block">Contact Us</router-link>
+                    <router-link :to="{ name: 'About' }" class="nav-link block">About Us</router-link>
                 </div>
             </div>
         </nav>

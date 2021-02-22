@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
+.nav-link {
+    @apply text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 px-3 py-2 rounded-md text-base font-medium;
+}
+
+.nav-link-primary {
+    @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-500 text-white px-3 py-2 rounded-md text-base font-medium;
+}
 @tailwind utilities;
