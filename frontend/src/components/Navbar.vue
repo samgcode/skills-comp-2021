@@ -22,7 +22,7 @@
                         </router-link>
                         <div class="hidden sm:block sm:ml-6">
                             <div class="flex space-x-4">
-                                <router-link :to="{ name: 'Home' }" class="nav-link-primary">Home</router-link>
+                                <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
                                 <router-link :to="{ name: 'Store' }" class="nav-link">Store</router-link>
                                 <router-link :to="{ name: 'Contact' }" class="nav-link">Contact Us</router-link>
                                 <router-link :to="{ name: 'About' }" class="nav-link">About Us</router-link>
@@ -34,7 +34,7 @@
 
             <div class="sm:hidden text-white" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
-                    <router-link :to="{ name: 'Home' }" class="nav-link-primary block">Home</router-link>
+                    <router-link :to="{ name: 'Home' }" class="nav-link block">Home</router-link>
                     <router-link :to="{ name: 'Store' }" class="nav-link block">Store</router-link>
                     <router-link :to="{ name: 'Contact' }" class="nav-link block">Contact Us</router-link>
                     <router-link :to="{ name: 'About' }" class="nav-link block">About Us</router-link>
