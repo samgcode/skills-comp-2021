@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 .nav-link {
-    @apply text-gray-300 hover:bg-gray-600 hover:text-white active:bg-gray-500 px-3 py-2 rounded-md text-base font-medium;
+    @apply text-green-400 hover:bg-blue-400 hover:text-white active:bg-blue-500 px-3 py-2 rounded-md text-xl font-semibold;
 }
 
 .nav-link.router-link-active {
-    @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-500 text-white px-3 py-2 rounded-md text-base font-medium;
+    @apply bg-blue-600 hover:bg-blue-400 active:bg-blue-500 text-white;
 }
 
 

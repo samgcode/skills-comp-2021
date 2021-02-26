@@ -1,6 +1,6 @@
 <template>
     <body>
-        <nav class="bg-black">
+        <nav class="bg-blue-500">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -18,7 +18,7 @@
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center">
                             <img class="block h-8 w-auto" src="@/assets/logo.png" alt="Workflow">
-                            <h1 class="hidden lg:inline-block h-8 font-semibold text-white text-2xl pl-1 py-0">Name</h1>
+                            <!-- <h1 class="hidden lg:inline-block h-8 font-semibold text-white text-2xl pl-1 py-0">Name</h1> -->
                         </router-link>
                         <div class="hidden sm:block sm:ml-6">
                             <div class="flex space-x-4">
