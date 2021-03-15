@@ -1,12 +1,56 @@
 @tailwind base;
 @tailwind components;
+
+@import url("https://use.typekit.net/wnr4sra.css");
+
+.font-primary {
+    font-family: quicksand, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.border-3 {
+    border-width: 3px;
+}
+
 .nav-link {
-    @apply text-green-400 hover:bg-blue-400 hover:text-white active:bg-blue-500 px-3 py-2 rounded-md text-xl font-semibold;
+    @apply text-green border-3 border-transparent hover:bg-green hover:text-white active:bg-green-superlight px-3 py-1 rounded-md text-xl font-semibold;
 }
 
 .nav-link.router-link-active {
-    @apply bg-blue-600 hover:bg-blue-400 active:bg-blue-500 text-white;
+    @apply text-white border-green hover:bg-green-dark active:bg-green-superlight;
 }
 
+.btn-primary {
+    @apply inline-block px-5 py-3 rounded-lg shadow-lg bg-green font-black font-semibold tracking-wider transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-blue;
+}
+
+.btn-primary:hover {
+    @apply bg-green-dark;
+}
+
+.btn-primary:active {
+    @apply bg-green-light;
+}
+
+.btn-secondary {
+    @apply inline-block px-5 py-2 rounded-lg shadow-lg bg-gray-50 text-blue font-semibold tracking-wider border-4 border-blue transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green;
+}
+
+.btn-secondary:hover {
+    @apply bg-blue-superlight;
+}
+
+.btn-secondary:active {
+    @apply -translate-y-0.5;
+}
+
+.white-subheading {
+    @apply mt-8 text-white text-xl;
+}
+
+.full-width-container {
+    @apply container max-w-full text-center;
+}
 
 @tailwind utilities;
