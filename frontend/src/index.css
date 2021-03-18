@@ -14,11 +14,11 @@
 }
 
 .nav-link {
-    @apply text-green border-3 border-transparent hover:bg-green hover:text-white active:bg-green-superlight px-3 py-1 rounded-md text-xl font-semibold;
+    @apply text-gray-400 border-t-8 h-20 pt-5 px-10 border-transparent hover:bg-green-dark hover:text-white focus:outline-none focus:text-white active:bg-green-superlight px-2 py-1 text-xl font-semibold;
 }
 
 .nav-link.router-link-active {
-    @apply text-white border-green hover:bg-green-dark active:bg-green-superlight;
+    @apply text-green border-green active:bg-green-superlight hover:text-white focus:text-white;
 }
 
 .btn-primary {
