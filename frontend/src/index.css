@@ -22,7 +22,7 @@
 }
 
 .btn-primary {
-    @apply inline-block px-5 py-3 rounded-lg shadow-lg bg-green font-black font-semibold tracking-wider transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-blue;
+    @apply inline-block cursor-pointer px-5 py-3 rounded-lg shadow-lg bg-green font-black font-semibold tracking-wider transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-blue;
 }
 
 .btn-primary:hover {
@@ -34,7 +34,7 @@
 }
 
 .btn-secondary {
-    @apply inline-block px-5 py-2 rounded-lg shadow-lg bg-gray-50 text-blue font-semibold tracking-wider border-4 border-blue transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green;
+    @apply inline-block cursor-pointer px-5 py-2 rounded-lg shadow-lg bg-gray-50 text-blue font-semibold tracking-wider border-4 border-blue transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green;
 }
 
 .btn-secondary:hover {
@@ -43,6 +43,10 @@
 
 .btn-secondary:active {
     @apply -translate-y-0.5;
+}
+
+.btn-primary-sm {
+    @apply inline-block cursor-pointer text-sm px-4 py-1 rounded-lg shadow-lg bg-green font-black font-semibold tracking-wider transform transition hover:-translate-y-0.5 focus:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-1 focus:ring-blue;
 }
 
 .white-subheading {
