@@ -18,7 +18,7 @@
 }
 
 .nav-link.router-link-active {
-    @apply text-green border-green active:bg-green-superlight hover:text-white focus:text-white;
+    @apply text-green border-green active:bg-green-superlight hover:text-white focus:underline;
 }
 
 .btn-primary {
@@ -38,7 +38,7 @@
 }
 
 .btn-secondary:hover {
-    @apply bg-blue-superlight;
+    @apply bg-blue-200;
 }
 
 .btn-secondary:active {
