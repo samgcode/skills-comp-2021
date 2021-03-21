@@ -10,9 +10,12 @@
                 <item-card :id="1" @show="showModal"/>
                 <item-card :id="2" @show="showModal"/>
                 <item-card :id="3" @show="showModal"/>
+                <item-card :id="2" @show="showModal"/>
+                <item-card :id="3" @show="showModal"/>
             </div>
-        </div>        
-        <review-modal @close="closeModal" :class="{'hidden' : !showReviews}" :reviews="reviews" />
+        </div> 
+        
+        <review-modal @close="closeModal" :showReviews="showReviews" :reviews="reviews" />
     </body>
 </template>
 
