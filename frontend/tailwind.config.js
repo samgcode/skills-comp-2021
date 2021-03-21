@@ -26,6 +26,11 @@ module.exports = {
         dark: '#3375de',
         superdark: '#1F2937'
       },
+    },
+    extend: {
+      height: {
+        '2xl': '600px',
+      }
     }
   },
   variants: {
