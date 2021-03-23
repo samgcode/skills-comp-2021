@@ -5,6 +5,7 @@
             <router-link :to="{ name: 'Home' }" class="btn-primary my-4 mr-4">Write a review</router-link>
             <!-- <router-link :to="{ name: 'Contact' }" class="btn-secondary">Contact us</router-link> -->
         </div>
+        <error-display :error="error" :show="errorOccured"></error-display>
         <div class="flex justify-center">
             <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1" >
                 <item-card :id="1" @show="showModal" data-aos="fade-down-right"/>
@@ -26,17 +27,24 @@
 <script>
 import ItemCard from './ItemCard.vue'
 import ReviewModal from './ReviewModal.vue'
+import ErrorDisplay from '../Error/ErrorDisplay'
 export default {
     name: 'Store',
     components: {
         ItemCard,
         ReviewModal,
+        ErrorDisplay
     },
     data() {
         return {
             showReviews: false,
             itemId: 0,
-            reviews: [{id:0}]
+            reviews: [{id:0}],
+            error: {
+                statusCode: '404',
+                message: 'This is an error message which is a message for an error which has a message because this is an error with an error message'
+            },
+            errorOccured: false
         }
     },
     methods: {
