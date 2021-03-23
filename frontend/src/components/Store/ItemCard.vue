@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="flex max-w-7xl">
+        <div class="flex max-w-7xl transition transform hover:scale-105">
             <div class="p-10">  
                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-blue-superdark">
                     <img class="w-full" src="@/assets/red_bottle.png" alt="image">
