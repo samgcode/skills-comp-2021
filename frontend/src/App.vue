@@ -21,9 +21,15 @@
 <script>
 import Footbar from './components/Footbar.vue'
 import Navbar from './components/Navbar.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
   components: { Navbar, Footbar },
-  name: 'App'
+  name: 'App',
+  created() {
+    AOS.init()
+  }
 }
 </script>
 

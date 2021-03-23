@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-superdark mt-52">
+    <div class="bg-blue-superdark mt-52" data-aos="fade-in">
         <div class="container pb-24 max-w-full">
             <div class="xl:mx-52 lg:mx-40 md:mx-32 sm:mx-10 mx-5 grid lg:grid-cols-6 grid-cols-4">
                 <router-link :to="{ name: 'About' }" class="white-subheading underline pt-2 mx-2">About us</router-link>

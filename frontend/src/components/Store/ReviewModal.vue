@@ -32,22 +32,17 @@
                                 </button>
                             </div>
                             <div class="mt-2 grid grid-cols-1 sm:h-2xl h-96 overflow-auto mb-20">
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
-                                <review-card :review="reviews[0]"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+
                             </div>
                         </div>
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse absolute inset-x-0 bottom-0">
