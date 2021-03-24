@@ -7,17 +7,19 @@
         </div>
         <error-display :error="error" :show="errorOccured"></error-display>
         <div class="flex justify-center">
-            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1" >
-                <item-card :id="1" @show="showModal" data-aos="fade-down-right"/>
-                <item-card :id="2" @show="showModal" data-aos="fade-down"/>
-                <item-card :id="3" @show="showModal" data-aos="fade-down-left"/>
-                <item-card :id="4" @show="showModal" data-aos="fade-down-right"/>
-                <item-card :id="5" @show="showModal" data-aos="fade-down"/>
-                <item-card :id="6" @show="showModal" data-aos="fade-down-left"/>
-                <item-card :id="7" @show="showModal" data-aos="fade-down-right"/>
-                <item-card :id="8" @show="showModal" data-aos="fade-down"/>
-                <item-card :id="9" @show="showModal" data-aos="fade-down-left"/>
+            <!-- <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1" v-for="item in items" :key="item.id">
+                <item-card :item="item" @show="showModal" data-aos="fade-down"/>
+            </div> -->
+            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                <item-card :item="item" @show="showModal" data-aos="fade-down" v-for="item in items" :key="item.id"/>
             </div>
+            <!-- <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+                <item-card :item="{imagename: 'plastic_bottle', name: '10L Premium Oxygen - Single', onSale: 'true', price: '29.00', salePrice: '24.99'}" @show="showModal" data-aos="fade-down"/>
+                <item-card :item="{imagename: 'plastic_bottle', name: '10L Premium Oxygen - Single', onSale: 'true', price: '29.00', salePrice: '24.99'}" @show="showModal" data-aos="fade-down"/>
+                <item-card :item="{imagename: 'plastic_bottle', name: '10L Premium Oxygen - Single', onSale: 'true', price: '29.00', salePrice: '24.99'}" @show="showModal" data-aos="fade-down"/>
+
+
+            </div> -->
         </div> 
         
         <review-modal @close="closeModal" :showReviews="showReviews" :reviews="reviews" />
@@ -28,6 +30,10 @@
 import ItemCard from './ItemCard.vue'
 import ReviewModal from './ReviewModal.vue'
 import ErrorDisplay from '../Error/ErrorDisplay'
+import serviceLocator from '../../backend/serviceLocator'
+
+const itemService = serviceLocator.services.itemService;
+
 export default {
     name: 'Store',
     components: {
@@ -39,6 +45,7 @@ export default {
         return {
             showReviews: false,
             itemId: 0,
+            items: [],
             reviews: [{id:0}],
             error: {
                 statusCode: '404',
@@ -57,7 +64,22 @@ export default {
         },
         closeModal() {
             this.showReviews = false;
+        },
+        async getItems() {
+            try {
+                this.items = await itemService.getItems()
+                
+            } catch(err) {
+                this.errorOccured = true;
+                this.error = {
+                    message: 'error occured while trying to fetch items',
+                }
+                console.log(err)
+            }
         }
+    },
+    mounted() {
+        this.getItems()
     }
 }
 </script>
