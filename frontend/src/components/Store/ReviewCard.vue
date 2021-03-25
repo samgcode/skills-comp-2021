@@ -4,9 +4,9 @@
             <div class="pt-5 sm:pl-9">  
                 <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
                     <div class="px-4 py-4">
-                        <h1 class="text-xl">Name</h1>
+                        <h1 class="text-xl">{{ review.username }}</h1>
                         <p class="text-gray-500 text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan est a sagittis vestibulum.
+                            {{ review.review }}
                         </p>
                     </div>
                 </div>
@@ -26,6 +26,6 @@ export default {
         return {
             
         }
-    },
+    }
 }
 </script>

@@ -16,7 +16,6 @@ class ItemService {
             const convertedItem = this._convertItem(item, ratingAverage)
             return convertedItem
         })
-        console.log('items', convertedItems)
         return convertedItems
     }
 

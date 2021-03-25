@@ -33,6 +33,10 @@
 
 
 <script>
+import serviceLocator from '../../backend/serviceLocator'
+
+const reviewService = serviceLocator.services.reviewService
+
 export default {
     name: 'ItemCard',
     props: {
@@ -41,12 +45,28 @@ export default {
     data() {
         return {
             showReviews: false,
+            itemId: '',
+            reviews: []
         }
     },
     methods: {
-        showModal: function() {
-            this.$emit('show', this.id)
+        async showModal() {
+            await this.getReviews()
+            this.$emit('show', this.item.name, this.reviews)
+        },
+        async getReviews() {
+            try {
+                this.reviews = await reviewService.getReviewsByItemId(this.itemId)
+            } catch(err) {
+                this.$emit('onError', {
+                    message: 'Error occured while trying to fetch reviews',
+                })
+                console.log(err)
+            }
         }
+    },
+    mounted() {
+        this.itemId = this.item.id
     }
 }
 </script>
