@@ -22,7 +22,7 @@
                             <div class="sm:flex sm:items-start justify-between">
                                 <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                     <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                        Reviews for {{ reviews[0].id }}
+                                        Reviews for {{ itemName }}
                                     </h3>
                                 </div>
                                 <button type="button" @click="closeModal()" class="focus:outline-none focus:ring-2 ring-blue ring-offset-8 rounded-sm hover:fill-black fill-current">
@@ -31,18 +31,23 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="mt-2 grid grid-cols-1 sm:h-2xl h-96 overflow-auto mb-20">
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
-                                <review-card :review="reviews[0]"  data-aos="fade-up"/>
+                            <div class="mt-2 flex-row grid-cols-1 sm:h-2xl overflow-auto mb-20" v-if="hasReviews">
+                                <review-card :review="review"  data-aos="fade-up" v-for="review in reviews" :key="review.id"/>
 
+                            </div>
+                            <div class="mt-2 grid grid-cols-1 sm:h-2xl h-96 overflow-auto mb-20" v-if="!hasReviews">
+                                <div class="flex max-w-7xl" data-aos="fade-up">
+                                    <div class="pt-5 sm:pl-9">  
+                                        <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
+                                            <div class="px-4 py-4">
+                                                <h1 class="text-xl">No reviews for this item</h1>
+                                                <p class="text-gray-500 text-md">
+                                                    You can submit one on the home page
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
                             </div>
                         </div>
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse absolute inset-x-0 bottom-0">
@@ -63,20 +68,22 @@ export default {
     name: 'ReviewModal',
     props: {
         showReviews: Boolean,
+        hasReviews: Boolean,
         reviews: Object,
+        itemName: String
     },
     components: {
         ReviewCard
     },
     data() {
         return {
-            
+
         }
     },
     methods: {
         closeModal() {
-            this.$emit('close');
+            this.$emit('close')
         }
-    }
+    },
 }
 </script>

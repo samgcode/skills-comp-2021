@@ -6,14 +6,17 @@
                     <img class="w-full" src="@/assets/red_bottle.png" alt="image">
                     <hr class="border-green border-3"/>
                     <div class="px-4 py-4">
-                        <div class="font-bold text-xl text-white mb-2">Name</div>
+                        <div class="font-bold text-xl text-white mb-2">{{ item.name }}</div>
                         <p class="text-white text-base">
-                            Buy authentic malnad banana chips without any salt or masala added. Bananans are...
+                            {{ item.description }}
                         </p>
                         <div class="flex text-xl justify-between pt-4">
-                            <div class="flex text-xl">
-                                <h2 class="text-green line-through pr-1">$15</h2>
-                                <h2 class="text-white">$10</h2>
+                            <div class="flex text-xl" v-if="item.onSale">
+                                <h2 class="text-green line-through pr-1">${{ item.price }}</h2>
+                                <h2 class="text-white">${{ item.salePrice }}</h2>
+                            </div>
+                            <div class="flex text-xl" v-if="!item.onSale">
+                                <h2 class="text-white">${{ item.price }}</h2>
                             </div>
                             <div class="flex justify-end">
                                 <button type="button" class="btn-primary btn-primary-sm" @click="showModal()">
@@ -30,20 +33,40 @@
 
 
 <script>
+import serviceLocator from '../../backend/serviceLocator'
+
+const reviewService = serviceLocator.services.reviewService
+
 export default {
     name: 'ItemCard',
     props: {
-        id: Number,
+        item: Object,
     },
     data() {
         return {
             showReviews: false,
+            itemId: '',
+            reviews: []
         }
     },
     methods: {
-        showModal: function() {
-            this.$emit('show', this.id)
+        async showModal() {
+            await this.getReviews()
+            this.$emit('show', this.item.name, this.reviews)
+        },
+        async getReviews() {
+            try {
+                this.reviews = await reviewService.getReviewsByItemId(this.itemId)
+            } catch(err) {
+                this.$emit('onError', {
+                    message: 'Error occured while trying to fetch reviews',
+                })
+                console.log(err)
+            }
         }
+    },
+    mounted() {
+        this.itemId = this.item.id
     }
 }
 </script>
