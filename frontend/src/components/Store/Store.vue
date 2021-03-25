@@ -8,11 +8,11 @@
         <error-display :error="error" :show="errorOccured"></error-display>
         <div class="flex justify-center">
             <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
-                <item-card :item="item" @show="showModal" @onError="onError" data-aos="fade-down" v-for="item in items" :key="item.id"/>
+                <item-card :item="item" @show="showModal" @onError="onReviewError" data-aos="fade-down" v-for="item in items" :key="item.id"/>
             </div>
         </div> 
         
-        <review-modal @close="closeModal" :showReviews="showReviews" :hasReviews="hasReviews" :reviews="reviews" :itemName="itemName"/>
+        <review-modal @close="closeModal" :showReviews="showReviews" :hasReviews="hasReviews" :reviews="reviews" :itemName="itemName" :showError="reviewErrorOccured" :error="reviewError"/>
     </body>
 </template>
 
@@ -42,7 +42,9 @@ export default {
                 statusCode: '404',
                 message: 'This is an error message which is a message for an error which has a message because this is an error with an error message'
             },
-            errorOccured: false
+            errorOccured: false,
+            reviewError: {},
+            reviewErrorOccured: false
         }
     },
     methods: {
@@ -63,12 +65,17 @@ export default {
             try {
                 this.items = await itemService.getItems()
             } catch(err) {
-                onError(err);
+                this.errorOccured = true
+                this.error = {
+                    message: 'error occured while trying to fetch items',
+                }
+                console.log(err)
             }
         },
-        onError(err) {
-            this.errorOccured = true
-            this.error = err
+        onReviewError(err) {
+            this.hasReviews = false
+            this.reviewErrorOccured = true
+            this.reviewError = err
             console.log(err)
         }
     },

@@ -31,23 +31,27 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="mt-2 flex-row grid-cols-1 sm:h-2xl overflow-auto mb-20" v-if="hasReviews">
-                                <review-card :review="review"  data-aos="fade-up" v-for="review in reviews" :key="review.id"/>
-
-                            </div>
-                            <div class="mt-2 grid grid-cols-1 sm:h-2xl h-96 overflow-auto mb-20" v-if="!hasReviews">
-                                <div class="flex max-w-7xl" data-aos="fade-up">
-                                    <div class="pt-5 sm:pl-9">  
-                                        <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
-                                            <div class="px-4 py-4">
-                                                <h1 class="text-xl">No reviews for this item</h1>
-                                                <p class="text-gray-500 text-md">
-                                                    You can submit one on the home page
-                                                </p>
-                                            </div>
-                                        </div>
+                            <div class="mt-2 flex-row grid-cols-1 sm:h-2xl overflow-auto mb-20">
+                                <error-display :error="error" :show="showError"></error-display>
+                                <div v-if="!showError">
+                                    <div v-if="hasReviews">
+                                        <review-card :review="review"  data-aos="fade-up" v-for="review in reviews" :key="review.id"/>
                                     </div>
-                                </div>   
+                                    <div v-if="!hasReviews">
+                                        <div class="flex max-w-7xl" data-aos="fade-up">
+                                            <div class="pt-5 sm:pl-9">  
+                                                <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
+                                                    <div class="px-4 py-4">
+                                                        <h1 class="text-xl">No reviews for this item</h1>
+                                                        <p class="text-gray-500 text-md">
+                                                            You can submit one on the home page
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse absolute inset-x-0 bottom-0">
@@ -63,17 +67,22 @@
 </template>
 
 <script>
-import ReviewCard from './ReviewCard.vue';
+import ReviewCard from './ReviewCard.vue'
+import ErrorDisplay from '../Error/ErrorDisplay'
+
 export default {
     name: 'ReviewModal',
     props: {
         showReviews: Boolean,
         hasReviews: Boolean,
         reviews: Object,
-        itemName: String
+        itemName: String,
+        showError: Boolean,
+        error: Object
     },
     components: {
-        ReviewCard
+        ReviewCard,
+        ErrorDisplay
     },
     data() {
         return {
