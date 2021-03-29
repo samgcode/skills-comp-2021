@@ -36,6 +36,8 @@
 import serviceLocator from '../../backend/serviceLocator'
 
 const reviewService = serviceLocator.services.reviewService
+const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
+
 
 export default {
     name: 'ItemCard',
@@ -51,19 +53,18 @@ export default {
     },
     methods: {
         async showModal() {
-            await this.getReviews()
-            this.$emit('show', this.item.name, this.reviews)
-        },
-        async getReviews() {
             try {
+                this.$emit('show', this.item.name)
                 this.reviews = await reviewService.getReviewsByItemId(this.itemId)
+                await wait(2000)
+                this.$emit('reviews', this.reviews)
             } catch(err) {
                 this.$emit('onError', {
                     message: 'Error occured while trying to fetch reviews',
                 })
                 console.log(err)
             }
-        }
+        },
     },
     mounted() {
         this.itemId = this.item.id

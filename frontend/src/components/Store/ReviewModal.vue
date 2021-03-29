@@ -33,11 +33,12 @@
                             </div>
                             <div class="mt-2 flex-row grid-cols-1 sm:h-2xl overflow-auto mb-20">
                                 <error-display :error="error" :show="showError"></error-display>
+                                <square-spinner :loading="loading"></square-spinner>
                                 <div v-if="!showError">
                                     <div v-if="hasReviews">
                                         <review-card :review="review"  data-aos="fade-up" v-for="review in reviews" :key="review.id"/>
                                     </div>
-                                    <div v-if="!hasReviews">
+                                    <div v-if="!hasReviews && !loading">
                                         <div class="flex max-w-7xl" data-aos="fade-up">
                                             <div class="pt-5 sm:pl-9">  
                                                 <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
@@ -69,6 +70,7 @@
 <script>
 import ReviewCard from './ReviewCard.vue'
 import ErrorDisplay from '../Error/ErrorDisplay'
+import SquareSpinner from '../Spinners/SquareSpinner'
 
 export default {
     name: 'ReviewModal',
@@ -78,11 +80,13 @@ export default {
         reviews: Object,
         itemName: String,
         showError: Boolean,
-        error: Object
+        error: Object,
+        loading: Boolean
     },
     components: {
         ReviewCard,
-        ErrorDisplay
+        ErrorDisplay,
+        SquareSpinner
     },
     data() {
         return {
