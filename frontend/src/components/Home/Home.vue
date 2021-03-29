@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <div class="full-width-container bg-blue-superdark" data-aos="fade-in" data-aos-duration="600">
+        <div class="full-width-container bg-blue-superdark" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
             <hr class="border-green border-4 mt-8"/>
             <h1 class="text-3xl text-white pt-6">We are committed to delivering the best air possible.</h1>
             <hr class="border-green border-3 mt-8 max-w-min px-10 mx-auto"/>
@@ -18,12 +18,12 @@
             <h2 class="white-subheading">“It comes out of the tap, why would I want a bottle?”</h2>
             <h2 class="white-subheading pb-8">The truth is we have begun to appreciate the clean, pure and refreshing taste of quality water.</h2>
         </div>
-        <div class="full-width-container bg-blue shadow-lg" data-aos="slide-up">
+        <div class="full-width-container bg-blue shadow-lg" data-aos="slide-up" data-aos-delay="50">
             <h1 class="text-white text-2xl pt-4 pb-16 font-semibold">Air is going the same direction.</h1>
         </div>
 
         <div class="full-width-container pt-32">
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" data-aos-delay="150">
                 <h1 class="text-2xl">Where do we get our air?</h1>
                 <p class="mx-auto max-w-6xl">The Rocky Mountains of Canada are a protected UNESCO World Heritage Site. Here is where Rapid Air captures and bottles some the highest quality air in the world. We want our customers to experience breathing the way it was intended. Free of city pollution, fragrances and waste; our Banff and Lake Louise lines of clean air are unmatchable in quality.</p>
             </div>
