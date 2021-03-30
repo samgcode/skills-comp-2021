@@ -77,7 +77,7 @@ export default {
     props: {
         showReviews: Boolean,
         hasReviews: Boolean,
-        reviews: Object,
+        reviews: Array,
         itemName: String,
         showError: Boolean,
         error: Object,

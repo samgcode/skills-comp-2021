@@ -1,8 +1,11 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import vueScrollReveal from 'vue-scroll-reveal'
 import './index.css'
 
-const app = createApp(App).use(router, vueScrollReveal).mount('#app')
-// app.use(VueScrollReveal)
+Vue.config.productionTip = false
+
+new Vue({
+    router,
+    render: function(h) { return h(App) }
+}).$mount('#app')

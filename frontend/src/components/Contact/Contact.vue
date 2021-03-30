@@ -10,7 +10,7 @@
                         </div>
                         <hr class="border-green border-3"/>
                         <div class="text-xl pt-4 px-4 bg-white max-w-full">
-                            <form @submit.prevent="submitForm()" @change="validate">
+                            <form @submit.prevent="submitForm()" @change="validateForm">
                                 <div class="mb-4">
                                     <label class="form-label" for="name">
                                         Name

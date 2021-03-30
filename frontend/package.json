@@ -1,29 +1,26 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "description": "frontend ui for skills-comp-2021",
-  "author": "Sam g <samgcode@gmail.com>",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "aos": "^2.3.4",
-    "autoprefixer": "^9.8.6",
-    "epic-spinners": "^1.1.0",
-    "mongodb-stitch-browser-sdk": "^4.8.0",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vue-scroll-reveal": "^1.0.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2"
-  }
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "aos": "^2.3.4",
+        "autoprefixer": "^9.8.6",
+        "epic-spinners": "^1.1.0",
+        "mongodb-stitch-browser-sdk": "^4.8.0",
+        "postcss": "^7.0.35",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+        "vue": "^2.6.11",
+        "vue-router": "^3.2.0",
+        "vue-scroll-reveal": "^1.0.11",
+        "vue-star-rating": "^1.7.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "vue-template-compiler": "^2.6.11"
+    }
 }
