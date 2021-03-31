@@ -19,6 +19,7 @@
                                 <h2 class="text-white">${{ item.price }}</h2>
                             </div>
                             <div class="flex justify-end">
+                                <star-rating class="pr-1 pb-1" :read-only="true" :rating="parseInt(item.average)" :star-size="20" :text-class="'hidden'" :active-color="'#11fe48'"></star-rating>
                                 <button type="button" class="btn-primary btn-primary-sm" @click="showModal()">
                                     Reviews
                                 </button>
@@ -34,6 +35,7 @@
 
 <script>
 import serviceLocator from '../../backend/serviceLocator'
+import StarRating from 'vue-star-rating'
 
 const reviewService = serviceLocator.services.reviewService
 const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
@@ -43,6 +45,9 @@ export default {
     name: 'ItemCard',
     props: {
         item: Object,
+    },
+    components: {
+        StarRating
     },
     data() {
         return {
