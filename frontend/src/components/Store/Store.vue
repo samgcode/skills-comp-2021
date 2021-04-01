@@ -3,7 +3,7 @@
         <div class="justify-center text-center" data-aos="fade-down">
             <!-- <div> -->
                 <h1 class="text-5xl text-black">Our Products</h1>
-                <router-link :to="{ name: 'Home' }" class="btn-primary my-4 mr-4">Write a review</router-link>
+                <router-link :to="{ name: 'ReviewForm' }" class="btn-primary my-4 mr-4">Write a review</router-link>
                 <!-- <router-link :to="{ name: 'Contact' }" class="btn-secondary">Contact us</router-link> -->
                 <square-spinner :loading="loading"></square-spinner>
             <!-- </div> -->
