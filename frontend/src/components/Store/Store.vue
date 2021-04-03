@@ -3,7 +3,7 @@
         <div class="justify-center text-center" data-aos="fade-down">
             <!-- <div> -->
                 <h1 class="text-5xl text-black">Our Products</h1>
-                <router-link :to="{ name: 'Home' }" class="btn-primary my-4 mr-4">Write a review</router-link>
+                <router-link :to="{ name: 'ReviewForm' }" class="btn-primary my-4 mr-4">Write a review</router-link>
                 <!-- <router-link :to="{ name: 'Contact' }" class="btn-secondary">Contact us</router-link> -->
                 <square-spinner :loading="loading"></square-spinner>
             <!-- </div> -->
@@ -11,7 +11,7 @@
         </div>
         <error-display :error="error" :show="errorOccured"></error-display>
         <div class="flex justify-center">
-            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-10/12">
                 <item-card :item="item" @show="showModal" @reviews="displayReviews" @onError="onReviewError" data-aos="fade-down" v-for="item in items" :key="item.id"/>
             </div>
         </div> 
@@ -27,7 +27,7 @@ import ErrorDisplay from '../Error/ErrorDisplay'
 import serviceLocator from '../../backend/serviceLocator'
 import SquareSpinner from '../Spinners/SquareSpinner'
 
-const itemService = serviceLocator.services.itemService;
+const itemService = serviceLocator.services.itemService
 const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
 
 export default {

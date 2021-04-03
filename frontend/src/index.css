@@ -1,16 +1,14 @@
 @tailwind base;
 @tailwind components;
-
 @import url("https://use.typekit.net/wnr4sra.css");
-
 .font-primary {
-    font-family: quicksand, sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    font-family:quicksand, sans-serif;
+    font-weight:500;
+    font-style:normal;
 }
 
 .border-3 {
-    border-width: 3px;
+    border-width:3px;
 }
 
 .nav-link {
@@ -55,6 +53,30 @@
 
 .full-width-container {
     @apply container max-w-full text-center;
+}
+
+.form-label {
+    @apply block text-gray-700 text-lg font-bold mb-2;
+}
+
+.form-input:focus {
+    @apply outline-none ring ring-blue shadow-xl -translate-y-1;
+}
+
+::placeholder {
+    @apply content-center;
+}
+
+.error {
+    @apply ring ring-red-400 text-red-500;
+}
+
+.error:focus {
+    @apply ring ring-red-500;
+}
+
+.error::placeholder {
+    @apply text-red-500;
 }
 
 @tailwind utilities;

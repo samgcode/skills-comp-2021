@@ -1,7 +1,7 @@
 const {
     Stitch,
     RemoteMongoClient,
-    AnonymousCredential
+    AnonymousCredential,
 } = require('mongodb-stitch-browser-sdk')
 
 const client = Stitch.initializeDefaultAppClient('skills2021-gqmwb')

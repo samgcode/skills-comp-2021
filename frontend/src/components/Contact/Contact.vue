@@ -121,25 +121,7 @@ export default {
 </script>
 
 <style scoped>
-.form-label {
-    @apply block text-gray-700 text-lg font-bold mb-2;
-}
 .form-input {
     @apply w-2xl md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition;
-}
-.form-input:focus {
-    @apply outline-none ring ring-blue shadow-xl -translate-y-1;
-}
-::placeholder {
-    @apply content-center;
-}
-.error {
-    @apply ring ring-red-400 text-red-500;
-}
-.error:focus {
-    @apply ring ring-red-500;
-}
-.error::placeholder {
-    @apply text-red-500;
 }
 </style>
