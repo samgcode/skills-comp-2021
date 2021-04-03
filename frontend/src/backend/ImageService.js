@@ -1,16 +1,31 @@
+const fs = require('file-system')
+
 const files = [
-    { name: 'glass_bottle' },
+    { name: 'plastic_bottles_2' },
+    { name: 'plastic_bottle' },
+    { name: 'glass_bottles_line_5' },
+    { name: 'two_bottles_2' },
+    { name: 'glass_bottles_line' },
+    { name: 'five_plastic_bottles' },
+    { name: 'glass_bottles_line_2' },
+    { name: 'three_glass_bottles_2' },
+    { name: 'three_glass_bottles' },
+    { name: 'red_bottles_3' },
+    { name: 'red_bottle' },
+    { name: 'red_bottles_2' },
 ]
 
+function base64_encode(file) {
+    // read binary data
+    var bitmap = file
+    // convert binary data to base64 encoded string
+    return new Buffer(bitmap).toString('base64');
+}
 
 class ImageService {
     constructor(serviceLocator) {
         this._collection = serviceLocator.collections.imageCollection
         this.uploadImages()
-    }
-
-    async getImages() {
-        const images = await this._collection.find().toArray()
     }
 
     async uploadImages() {
@@ -27,8 +42,18 @@ class ImageService {
     }
 
     async getImage(id) {
-        const response = await this._collection.find({ _id: id }).asArray()
-        return response
+        const response = await this._collection.find().asArray()
+        let image
+        response.forEach(element => {
+            if(element._id.toString() === id) {
+                image = element
+            }
+        })
+        if(image) {
+            return image.file
+        } else {
+            return ''
+        }
     }
     
 }

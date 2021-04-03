@@ -1,9 +1,9 @@
 <template>
     <body>
-        <div class="flex max-w-7xl transition transform hover:scale-105">
+        <div class="flex max-w-7xl transition transform hover:scale-105 w-2xl">
             <div class="p-10">  
                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-blue-superdark">
-                    <img class="w-full" src="@/assets/red_bottle.png" alt="image">
+                    <img class="w-full max-h-80" :src="item.image" alt="image">
                     <hr class="border-green border-3"/>
                     <div class="px-4 py-4">
                         <div class="font-bold text-xl text-white mb-2">{{ item.name }}</div>
@@ -73,6 +73,7 @@ export default {
     },
     mounted() {
         this.itemId = this.item.id
+        console.log(this.item)
     }
 }
 </script>
