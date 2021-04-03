@@ -2,6 +2,7 @@ class ItemService {
     constructor(serviceLocator) {
         this._collection = serviceLocator.collections.itemsCollection
         this._reviewService = serviceLocator.services.reviewService
+        this._imageService = serviceLocator.services.reviewService
     }
 
     async getItems() {
@@ -21,7 +22,7 @@ class ItemService {
 
     _convertItem(item, average) {
         const convertedItem = {
-            imagename: item.image,
+            image: item.image,
             name: item.name,
             onSale: item.onSale,
             price: item.price,
