@@ -10,12 +10,15 @@
 
         </div>
         <error-display :error="error" :show="errorOccured"></error-display>
-        <div class="flex justify-center">
-            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-10/12">
-                <item-card :item="item" @show="showModal" @reviews="displayReviews" @onError="onReviewError" data-aos="fade-down" v-for="item in items" :key="item.id"/>
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full flex flex-col p-4 sm:w-1/2 lg:w-1/3 transition transform hover:scale-105" v-for="item in items" :key="item.id" data-aos="fade-down" >
+                    <div class="flex flex-col flex-1 bg-blue-superdark rounded-lg shadow-lg">
+                        <item-card :item="item" @show="showModal" @reviews="displayReviews" @onError="onReviewError"/>
+                    </div>
+                </div>
             </div>
         </div> 
-        
         <review-modal @close="closeModal" :showReviews="showReviews" :hasReviews="hasReviews" :reviews="reviews" :itemName="itemName" :loading="reviewsLoading" :showError="reviewErrorOccured" :error="reviewError"/>
     </body>
 </template>

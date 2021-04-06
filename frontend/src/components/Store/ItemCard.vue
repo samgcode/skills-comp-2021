@@ -1,34 +1,27 @@
 <template>
     <body>
-        <div class="flex max-w-7xl transition transform hover:scale-105 w-2xl">
-            <div class="p-10">  
-                <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-blue-superdark">
-                    <img class="w-full max-h-80" :src="item.image" alt="image">
-                    <hr class="border-green border-3"/>
-                    <div class="px-4 py-4">
-                        <div class="font-bold text-xl text-white mb-2">{{ item.name }}</div>
-                        <p class="text-white text-base">
-                            {{ item.description }}
-                        </p>
-                        <div class="flex text-xl justify-between pt-4">
-                            <div class="flex text-xl" v-if="item.onSale">
-                                <h2 class="text-green line-through pr-1">${{ item.price }}</h2>
-                                <h2 class="text-white">${{ item.salePrice }}</h2>
-                            </div>
-                            <div class="flex text-xl" v-if="!item.onSale">
-                                <h2 class="text-white">${{ item.price }}</h2>
-                            </div>
-                            <div class="flex justify-end">
-                                <star-rating class="pr-1 pb-1" :read-only="true" :rating="parseInt(item.average)" :star-size="20" :text-class="'hidden'" :active-color="'#11fe48'"></star-rating>
-                                <button type="button" class="btn-primary btn-primary-sm" @click="showModal()">
-                                    Reviews
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="flex-1">
+            <img class="w-full max-h-96 object-fill" :src="item.image" alt="image">
+            <hr class="border-green border-3 w-full"/>
+        </div>
+        <div class="p-5">
+            <h1 class="font-bold text-xl text-white mb-2">{{ item.name }}</h1>
+            <div class="flex content-end text-xl justify-between pt-4">
+                <div class="flex text-xl" v-if="item.onSale">
+                    <h2 class="text-green line-through pr-1">${{ item.price }}</h2>
+                    <h2 class="text-white">${{ item.salePrice }}</h2>
+                </div>
+                <div class="flex text-xl" v-if="!item.onSale">
+                    <h2 class="text-white">${{ item.price }}</h2>
+                </div>
+                <div class="flex justify-end">
+                    <star-rating class="pr-1 pb-1" :read-only="true" :rating="parseInt(item.average)" :star-size="20" :text-class="'hidden'" :active-color="'#11fe48'"></star-rating>
+                    <button type="button" class="btn-primary btn-primary-sm" @click="showModal()">
+                        Reviews
+                    </button>
                 </div>
             </div>
-        </div>   
+        </div>
     </body>
 </template>
 
