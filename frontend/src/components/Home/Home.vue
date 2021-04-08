@@ -3,7 +3,7 @@
         <div class="xl:mx-52 lg:mx-40 md:mx-32 sm:mx-10">
             <div class="px-8 py-4 lg:flex justify-between">
                 <div  data-aos="fade-right">
-                    <h1 class="mt-6 text-6xl">Rapid <span class="text-green">Air</span></h1>
+                    <h1 class="mt-6 text-6xl">Rapid<span class="text-green">Air</span></h1>
                     <h2 class="text-3xl text-gray-500">A better way to breath</h2>
                     <div class="mt-6">
                         <router-link :to="{ name: 'About' }" class="btn-primary">About us</router-link>
