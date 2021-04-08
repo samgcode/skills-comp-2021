@@ -1,6 +1,6 @@
 <template>
     <body>
-        <nav class="sm:flex bg-blue-superdark col-span-1 justify-between sm:h-20">
+        <nav class="flex bg-blue-superdark col-span-1 justify-between sm:h-20">
             <div class="block py-2">
                 <div class="bg-primary mx-auto px-2 sm:px-6 lg:px-8 py-0">
                     <div class="relative flex items-center justify-between h-16">
@@ -29,14 +29,6 @@
                     </div>
                 </div>
 
-                <div class="sm:hidden text-white" id="mobile-menu">
-                    <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
-                        <router-link :to="{ name: 'Home' }" class="nav-link block" exact>Home</router-link>
-                        <router-link :to="{ name: 'Store' }" class="nav-link block" exact>Store</router-link>
-                        <router-link :to="{ name: 'Contact' }" class="nav-link block" exact>Contact Us</router-link>
-                        <router-link :to="{ name: 'About' }" class="nav-link block" exact>About Us</router-link>
-                    </div>
-                </div>
             </div>
 
             <div class="flex bg-blue content-center border-l-8 border-green px-4 py-4">
@@ -49,6 +41,14 @@
             </div>
             
         </nav>
+                <div class="sm:hidden text-white bg-blue-superdark" id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
+                        <router-link :to="{ name: 'Home' }" class="nav-link block" exact @click.native="open = false">Home</router-link>
+                        <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link>
+                        <router-link :to="{ name: 'Contact' }" class="nav-link block" exact @click.native="open = false">Contact Us</router-link>
+                        <router-link :to="{ name: 'About' }" class="nav-link block" exact @click.native="open = false">About Us</router-link>
+                    </div>
+                </div>
     </body>
 </template>
 
