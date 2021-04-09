@@ -8,11 +8,19 @@
     - scale down 
     - white bg
  - add meta tags
- - Address in footer
  - fix css for w i d e screens
+ - collapse about ceo text on mobile
 
+Before the day:
+ - install vscode, git, ftp client
+ - switch image service to use name instead of instead
 
-
+Before the end:
+ - remove artificial loading time
+ - check every page on every breakpoint
+ - build
+ - submit files from dist folder
+ - check uploaded website is the newest version
 
 Main focuses:
  - Accessibility
