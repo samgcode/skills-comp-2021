@@ -50,23 +50,6 @@
                 </div>
             </div>   
         </div>
-        <div class="flex justify-center bg-blue-200 mt-10">
-            <div class="md:grid-cols-2 mt-12 container grid grid-cols-1 max-w-6xl xl:mx-96 lg:mx-44 md:mx-15 sm:mx-10 mx-10 gap-4">
-                <div class="text-left max-w-md" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="text-black text-2xl">Operating hours</h1>
-                    <h2 class="text-black text-lg">mon-fri: 5am-10pm</h2>
-                    <h2 class="text-black text-lg">sat-sun: 7am-8pm</h2>
-                </div>
-                <div class="text-left max-w-md" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="text-black text-2xl">Address</h1>
-                    <h2 class="text-black text-lg">22 1139 AVE NW</h2>
-                    <h2 class="text-black text-lg">Edmonton AB T5M 2N0</h2>
-                </div>
-                <div class="text-left max-w-md pt-8" data-aos="fade-up">
-
-                </div>
-            </div>
-        </div> 
     </body>
 </template>
 
