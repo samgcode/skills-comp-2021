@@ -30,7 +30,7 @@
                 <h1 class="text-2xl">Where do we get our air?</h1>
                 <p class="mx-auto max-w-6xl">The Rocky Mountains of Canada are a protected UNESCO World Heritage Site. Here is where Rapid Air captures and bottles some the highest quality air in the world. We want our customers to experience breathing the way it was intended. Free of city pollution, fragrances and waste; our Banff and Lake Louise lines of clean air are unmatchable in quality.</p>
             </div>
-            <div class="md:grid-cols-2 mt-12 container grid grid-cols-1 max-w-6xl xl:mx-52 lg:mx-40 md:mx-32 sm:mx-10 mx-3 gap-4">
+            <div class="flex flex-wrap justify-center gap-8 pt-10">
                 <div class="text-left max-w-md">
                     <h2 class="text-blue text-xl" data-aos="fade-right">Banf Air</h2>
                     <p class="py-3" data-aos="fade-right">

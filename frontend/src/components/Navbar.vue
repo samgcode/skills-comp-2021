@@ -33,7 +33,7 @@
 
             <div class="flex bg-blue content-center border-l-8 border-green px-4 py-4">
                 <div class="flex-1 flex items-center justify-end sm:items-stretch sm:justify-start px-5">
-                    <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green rounded-sm" exact>
+                    <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green rounded-sm" @click.native="open = false" exact>
                         <img class="block h-11 w-auto" src="@/assets/logo.png" alt="RapidAir">
                         <!-- <h1 class="hidden lg:inline-block h-8 font-semibold text-white text-2xl pl-1 py-0">Name</h1> -->
                     </router-link>
