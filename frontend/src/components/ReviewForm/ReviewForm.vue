@@ -19,7 +19,8 @@
                             <div class="text-xl pt-4 px-4 bg-white max-w-full">
                             <form @submit.prevent="submitForm()" @change="validateForm">
                                 <div class="mb-4">
-                                <label class="form-label" for="name"> Name </label>
+                                <label class="form-label" for="name">Name</label>
+                                <span class="sr-only">name input</span>
                                 <input
                                     class="form-input"
                                     id="name"
@@ -31,6 +32,7 @@
                                 </div>
                                 <div class="mb-4">
                                 <label class="form-label" for="product">Product</label>
+                                <span class="sr-only">product input</span>
                                 <select
                                     class="form-input"
                                     id="product"
@@ -45,11 +47,13 @@
                                     :value="product.id"
                                     >
                                     {{ product.name }}
+                                    <span class="sr-only">{{ product.name }}</span>
                                     </option>
                                 </select>
                                 </div>
                                 <div class="mb-4">
                                 <label class="form-label" for="rating">Rating</label>
+                                <span class="sr-only">star rating input</span>
                                 <star-rating 
                                         v-model="formdata.rating"
                                         :star-size="40"
@@ -62,6 +66,7 @@
                                 </div>
                                 <div class="mb-4">
                                 <label class="form-label" for="message">Review</label>
+                                <span class="sr-only">review input</span>
                                 <textarea
                                     class="form-input h-32 flex justify-end"
                                     id="review"

@@ -15,6 +15,7 @@
                                     <label class="form-label" for="name">
                                         Name
                                     </label>
+                                    <span class="sr-only">name input</span>
                                     <input class="form-input" 
                                         id="name" type="text" placeholder="Name"
                                         v-model="formdata.name"
@@ -25,6 +26,7 @@
                                     <label class="form-label" for="email">
                                         Email
                                     </label>
+                                    <span class="sr-only">email input</span>
                                     <input class="form-input" 
                                         id="email" type="text" placeholder="Email"
                                         v-model="formdata.email"
@@ -36,6 +38,7 @@
                                     <label class="form-label" for="message">
                                         Message
                                     </label>
+                                    <span class="sr-only">message input</span>
                                     <textarea class="form-input h-32 flex justify-end" 
                                         id="message" placeholder="Message"
                                         v-model="formdata.message"
