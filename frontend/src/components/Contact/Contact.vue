@@ -30,6 +30,7 @@
                                         v-model="formdata.email"
                                         :class="{ 'error' : validation[1] }"
                                     />
+                                    <h2 class="text-red-500 pt-2 pl-1" v-if="validation[1]">Please enter a valid email address</h2>
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label" for="message">

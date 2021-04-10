@@ -1,11 +1,10 @@
  - fix map moving around
  - create a database schema diagram
- - add invalid email text
  - write a list of reviews to be chaged on the day
  - add screen reader stuff for inputs
- - add hovering on item page to add review
  - change backend to services
 
+ - add hovering on item page to add review
  - change font for body text
  - item card bottom is fixed height
  - item card images 
