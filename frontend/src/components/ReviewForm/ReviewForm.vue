@@ -169,7 +169,7 @@ export default {
                 this.validation[1] = true
                 valid = false
             }
-            if(this.formdata.rating === 0) {
+            if(this.formdata.rating < 0) {
                 this.ratingBorderColor = '#DC3545';
                 valid = false;
             }
@@ -212,6 +212,6 @@ export default {
   @apply w-2xl md:max-w-lg sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition;
 }
 .form-input {
-  @apply w-2xl md:max-w-5xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition;
+  @apply w-2xl xl:max-w-5xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl max-w-sm shadow-md appearance-none border rounded py-2 px-3 text-gray-700 leading-tight transform transition;
 }
 </style>

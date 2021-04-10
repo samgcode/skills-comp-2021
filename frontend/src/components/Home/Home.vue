@@ -1,6 +1,6 @@
 <template>
     <body>
-        <div class="xl:mx-52 lg:mx-40 md:mx-32 sm:mx-10">
+        <div class="xl:mx-52 sm:mx-10">
             <div class="px-8 py-4 lg:flex justify-between">
                 <div  data-aos="fade-right">
                     <h1 class="mt-6 text-6xl">Rapid<span class="text-green">Air</span></h1>
@@ -10,7 +10,7 @@
                         <router-link :to="{ name: 'Store' }" class="ml-4 btn-secondary">Store</router-link>
                     </div>
                 </div>
-                <lazy-image :name="'mountain'" :classes="'object-contain h-96'" data-aos="fade"/>
+                <lazy-image :name="'mountain'" :classes="'object-contain h-96 lg:pt-0 pt-4'" data-aos="fade"/>
             </div>
         </div>
         <div class="full-width-container bg-blue-superdark" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">

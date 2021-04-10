@@ -109,8 +109,7 @@
             <h1 class="text-white text-2xl pt-4 pb-16 font-semibold max-w-7xl">Fred will use his experience in personal security, as well as his sales experience with mortgages to head up RapidAir to ensure that we are constantly progressing towards perfection.</h1>
         </div>
 
-        <div class="flex flex-wrap justify-center pl-5 pt-20">
-            <lazy-image :name="'guy_standing_mountain'" :classes="'sm:h-96'" data-aos="slide-right"/>
+        <div class="flex flex-wrap-reverse  justify-center pl-5 pt-20">
             <div class="flex-col pr-10 pl-5 2xl:pt-0 pt-5">
                 <h1 class="text-4xl" data-aos="fade-up">The history of RapidAir</h1>
                 <p class="max-w-2xl text-xl pt-3" data-aos="fade-up">RapidAir believes everyone should be entitled to fresh clean air, 
@@ -125,6 +124,7 @@
                                                     The phone call was to Jennifer, who as a former Commercial Diver possesses 
                                                     all the knowledge and qualities needed to Enhance Rapid, One Breath At A Time.</p>
             </div>
+            <lazy-image :name="'guy_standing_mountain'" :classes="'sm:h-96'" data-aos="slide-right"/>
         </div>
         <h1 class="text-center text-xl font-normal 2xl:px-32 lg:px-20 px-5 pt-12" data-aos="slide-up">One week later our adventure began, and RapidAir was founded.</h1>
         <h1 class="text-center text-xl font-semibold 2xl:px-32 lg:px-20 px-5 pt-10" data-aos="slide-up">We are a legendary comapany.</h1>

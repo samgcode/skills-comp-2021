@@ -31,7 +31,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="mt-2 flex-row grid-cols-1 sm:h-2xl overflow-auto mb-20">
+                            <div class="mt-2 flex-row grid-cols-1 xl:h-2xl md:h-96 overflow-auto mb-20">
                                 <error-display :error="error" :show="showError"></error-display>
                                 <square-spinner :loading="loading"></square-spinner>
                                 <div v-if="!showError">
