@@ -10,10 +10,9 @@
                         class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-blue-superdark"
                     >
                         <div class="px-8 pt-8 pb-4">
-                            <h1 class="text-white text-3xl">Contact RapidAir</h1>
+                            <h1 class="text-white text-3xl">Write a review</h1>
                             <p class="text-white text-lg">
-                                Please use the form to send us your message or ideas. Or simply
-                                pop in and say, hi!
+                                Please use the form to write a review for one of our products
                             </p>
                             </div>
                             <hr class="border-green border-3" />
