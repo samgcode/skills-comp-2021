@@ -26,9 +26,10 @@ const routes = [{
         name: 'About',
         component: About
     }, {
-        path: '/ReviewForm',
+        path: '/ReviewForm/:item',
         name: 'ReviewForm',
-        component: ReviewForm
+        component: ReviewForm,
+        props: true
     }
     // {
     //   path: '/about',

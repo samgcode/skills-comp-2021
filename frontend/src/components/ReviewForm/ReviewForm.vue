@@ -102,9 +102,6 @@ import ErrorDisplay from '@/components/Error/ErrorDisplay'
 const itemService = serviceLocator.services.itemService
 const reviewService = serviceLocator.services.reviewService
 
-const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
-
-
 export default {
     name: 'ReviewForm',
     components: {
@@ -125,40 +122,37 @@ export default {
             errorOccured: false,
             errorData: {},
             loading: true,
-            ratingBorderColor: ''
+            ratingBorderColor: '',
         }
     },
     methods: {
         async submitForm() {     
              this.hasSubmitted = true
-                this.errorOccured = false
-                if(this.validateForm()) {
-                    this.loading = true
-                    try {
-                        wait(2000)
-                        await reviewService.addReview(
-                            this.formdata.name, 
-                            this.formdata.rating, 
-                            this.formdata.review, 
-                            this.formdata.product
-                        )
-                        this.loading = false
-                        this.$router.push({
-                            name: 'Store'
-                        });
-                    } catch(err) {
-                        this.loading = false
-                        this.errorOccured = true
-                        this.submitText = 'Try again'
-                        this.errorData = {
-                            message: 'Error occured while trying send the review to the server',
-                        }
+            this.errorOccured = false
+            if(this.validateForm()) {
+                this.loading = true
+                try {
+                    await reviewService.addReview(
+                        this.formdata.name, 
+                        this.formdata.rating, 
+                        this.formdata.review, 
+                        this.formdata.product
+                    )
+                    this.loading = false
+                    this.$router.push({
+                        name: 'Store'
+                    });
+                } catch(err) {
+                    this.loading = false
+                    this.errorOccured = true
+                    this.submitText = 'Try again'
+                    this.errorData = {
+                        message: 'Error occured while trying send the review to the server',
                     }
                 }
+            }
         },
         validateForm() {
-            console.log(this.formdata)
-
             this.validation = [
                 false,
                 false,
@@ -188,8 +182,8 @@ export default {
             this.errorOccured = false
             try {
                 this.products = await itemService.getItems()
-                await wait(2000)
                 this.loading = false
+                
             } catch(err) {
                 this.loading = false
                 this.errorOccured = true
@@ -202,10 +196,12 @@ export default {
             }
         },
         ratingSelected: function() {
-            this.ratingBorderColor = '';
+            this.ratingBorderColor = ''
         }
     },
     mounted() {
+        this.formdata.product = this.$route.params.item
+        console.log(this.formdata)
         this.getProducts()
     }
 }

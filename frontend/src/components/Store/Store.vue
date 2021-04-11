@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div> 
-        <review-modal @close="closeModal" :showReviews="showReviews" :hasReviews="hasReviews" :reviews="reviews" :itemName="itemName" :loading="reviewsLoading" :showError="reviewErrorOccured" :error="reviewError"/>
+        <review-modal @close="closeModal" :showReviews="showReviews" :hasReviews="hasReviews" :reviews="reviews" :item="item" :loading="reviewsLoading" :showError="reviewErrorOccured" :error="reviewError"/>
     </body>
 </template>
 
@@ -31,7 +31,6 @@ import serviceLocator from '@/services/serviceLocator'
 import SquareSpinner from '@/components/Spinners/SquareSpinner'
 
 const itemService = serviceLocator.services.itemService
-const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
 
 export default {
     name: 'Store',
@@ -44,7 +43,7 @@ export default {
     data() {
         return {
             showReviews: false,
-            itemName: 'test',
+            item: {},
             items: [],
             reviews: [{}],
             hasReviews: false,
@@ -60,10 +59,13 @@ export default {
         }
     },
     methods: {
-        showModal(itemName) {
+        showModal(itemName, itemId) {
             this.hasReviews = false
             this.showReviews = true
-            this.itemName = itemName
+            this.item = {
+                name: itemName,
+                id: itemId
+            }
         },
         displayReviews(reviews) {
             this.reviewsLoading = false
@@ -82,7 +84,6 @@ export default {
         async getItems() {
             try {
                 this.loading = true
-                await wait(2000)
                 this.items = await itemService.getItems()
                 this.loading = false
             } catch(err) {

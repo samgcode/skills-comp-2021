@@ -31,8 +31,6 @@ import serviceLocator from '@/services/serviceLocator'
 import StarRating from 'vue-star-rating'
 
 const reviewService = serviceLocator.services.reviewService
-const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
-
 
 export default {
     name: 'ItemCard',
@@ -52,9 +50,8 @@ export default {
     methods: {
         async showModal() {
             try {
-                this.$emit('show', this.item.name)
+                this.$emit('show', this.item.name, this.itemId)
                 this.reviews = await reviewService.getReviewsByItemId(this.itemId)
-                await wait(2000)
                 this.$emit('reviews', this.reviews)
             } catch(err) {
                 this.$emit('onError', {

@@ -22,7 +22,7 @@
                             <div class="sm:flex sm:items-start justify-between">
                                 <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                     <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                        Reviews for {{ itemName }}
+                                        Reviews for {{ item.name }}
                                     </h3>
                                 </div>
                                 <button type="button" @click="closeModal()" class="focus:outline-none focus:ring-2 ring-blue ring-offset-8 rounded-sm hover:fill-black fill-current">
@@ -59,6 +59,9 @@
                             <button type="button" @click="closeModal()" class="mt-3 w-full inline-flex justify-center rounded-md btn-secondary sm:ml-3 sm:w-auto">
                                 Close
                             </button>
+                            <button type="button" @click="openReviewForm()" class="mt-3 w-full inline-flex justify-center rounded-md btn-primary sm:ml-3 sm:w-auto">
+                                Write a review
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -78,7 +81,7 @@ export default {
         showReviews: Boolean,
         hasReviews: Boolean,
         reviews: Array,
-        itemName: String,
+        item: Object,
         showError: Boolean,
         error: Object,
         loading: Boolean
@@ -96,6 +99,14 @@ export default {
     methods: {
         closeModal() {
             this.$emit('close')
+        },
+        openReviewForm() {
+            this.$router.push({
+                name: `ReviewForm`,
+                params: {
+                    item: this.item.id
+                }
+            });
         }
     },
 }
