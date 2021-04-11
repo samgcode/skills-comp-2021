@@ -1,7 +1,13 @@
 <template>
     <body>
         <div class="flex-1">
-            <img class="w-full max-h-96 object-fill" :src="item.image.file" :alt="item.image.name">
+            <img class="w-full max-h-96 object-fill cursor-pointer" :class="{ 'hover' : hover }" 
+                    :src="item.image.file" 
+                    :alt="item.image.name" 
+                    @mouseover="hover=true" 
+                    @mouseleave="hover=false"
+                    @click="openReviewForm()">
+            <h1 class="absolute top-5 left-5 text-xl" v-if="hover">Write a review</h1>
             <hr class="border-green border-3 w-full"/>
         </div>
         <div class="p-5">
@@ -44,7 +50,8 @@ export default {
         return {
             showReviews: false,
             itemId: '',
-            reviews: []
+            reviews: [],
+            hover: false
         }
     },
     methods: {
@@ -59,9 +66,24 @@ export default {
                 })
             }
         },
+        openReviewForm() {
+            this.$router.push({
+                name: `ReviewForm`,
+                params: {
+                    item: this.itemId
+                }
+            });
+        }
     },
     mounted() {
         this.itemId = this.item.id
     }
 }
 </script>
+
+<style scoped>
+.hover {
+    filter: blur(5px);
+    transition: filter 0.5s;
+}
+</style>

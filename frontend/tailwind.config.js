@@ -40,6 +40,7 @@ module.exports = {
         extend: {
             backgroundColor: ['active', 'hover'],
             translate: ['hover'],
+            scale: ['hover']
         },
     },
     plugins: [],

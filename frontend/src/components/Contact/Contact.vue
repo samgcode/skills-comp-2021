@@ -1,5 +1,5 @@
 <template>
-    <body>
+    <!-- <body> -->
         <div class="flex justify-center" data-aos="fade-up">
             <div class="flex max-w-8xl">
                 <div class="p-10">  
@@ -54,7 +54,7 @@
                 </div>
             </div>   
         </div>
-    </body>
+    <!-- </body> -->
 </template>
 
 <script>

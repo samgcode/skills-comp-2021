@@ -12,8 +12,8 @@
         <error-display :error="error" :show="errorOccured"></error-display>
         <div class="max-w-screen-xl mx-auto px-4">
             <div class="-mx-4 flex flex-wrap">
-                <div class="w-full flex flex-col p-4 sm:w-1/2 lg:w-1/3 transition transform hover:scale-105" v-for="item in items" :key="item.id" data-aos="fade-down" >
-                    <div class="flex flex-col flex-1 bg-blue-superdark rounded-lg shadow-lg">
+                <div class="w-full flex flex-col p-4 sm:w-1/2 lg:w-1/3 transition transform hover:scale-105" v-for="item in items" :key="item.id">
+                    <div class="flex flex-col flex-1 bg-blue-superdark rounded-lg shadow-lg" data-aos="fade-in" >
                         <item-card :item="item" @show="showModal" @reviews="displayReviews" @onError="onReviewError"/>
                     </div>
                 </div>
