@@ -27,7 +27,7 @@
 
 
 <script>
-import serviceLocator from '../../backend/serviceLocator'
+import serviceLocator from '@/services/serviceLocator'
 import StarRating from 'vue-star-rating'
 
 const reviewService = serviceLocator.services.reviewService

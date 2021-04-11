@@ -94,10 +94,10 @@
 </template>
 
 <script>
-import serviceLocator from '../../backend/serviceLocator'
-import SquareSpinner from '../Spinners/SquareSpinner'
+import serviceLocator from '@/services/serviceLocator'
+import SquareSpinner from '@/components/Spinners/SquareSpinner'
 import StarRating from 'vue-star-rating'
-import ErrorDisplay from '../Error/ErrorDisplay'
+import ErrorDisplay from '@/components/Error/ErrorDisplay'
 
 const itemService = serviceLocator.services.itemService
 const reviewService = serviceLocator.services.reviewService

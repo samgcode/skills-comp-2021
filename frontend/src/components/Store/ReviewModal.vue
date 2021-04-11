@@ -68,9 +68,9 @@
 </template>
 
 <script>
-import ReviewCard from './ReviewCard.vue'
-import ErrorDisplay from '../Error/ErrorDisplay'
-import SquareSpinner from '../Spinners/SquareSpinner'
+import ReviewCard from '@/components/Store/ReviewCard.vue'
+import ErrorDisplay from '@/components/Error/ErrorDisplay'
+import SquareSpinner from '@/components/Spinners/SquareSpinner'
 
 export default {
     name: 'ReviewModal',

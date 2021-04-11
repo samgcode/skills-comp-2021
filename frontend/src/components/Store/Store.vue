@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import ItemCard from './ItemCard.vue'
-import ReviewModal from './ReviewModal.vue'
-import ErrorDisplay from '../Error/ErrorDisplay'
-import serviceLocator from '../../backend/serviceLocator'
-import SquareSpinner from '../Spinners/SquareSpinner'
+import ItemCard from '@/components/Store/ItemCard.vue'
+import ReviewModal from '@/components/Store/ReviewModal.vue'
+import ErrorDisplay from '@/components/Error/ErrorDisplay'
+import serviceLocator from '@/services/serviceLocator'
+import SquareSpinner from '@/components/Spinners/SquareSpinner'
 
 const itemService = serviceLocator.services.itemService
 const wait=ms=>new Promise(resolve => setTimeout(resolve, ms))
