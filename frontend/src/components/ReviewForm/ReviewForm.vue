@@ -47,7 +47,6 @@
                                     :value="product.id"
                                     >
                                     {{ product.name }}
-                                    <span class="sr-only">{{ product.name }}</span>
                                     </option>
                                 </select>
                                 </div>
