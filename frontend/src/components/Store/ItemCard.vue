@@ -1,7 +1,7 @@
 <template>
     <body>
         <div class="flex-1">
-            <img class="w-full max-h-96 object-fill" :src="item.image" alt="image">
+            <img class="w-full max-h-96 object-fill" :src="item.image.file" :alt="item.image.name">
             <hr class="border-green border-3 w-full"/>
         </div>
         <div class="p-5">
@@ -60,13 +60,11 @@ export default {
                 this.$emit('onError', {
                     message: 'Error occured while trying to fetch reviews',
                 })
-                console.log(err)
             }
         },
     },
     mounted() {
         this.itemId = this.item.id
-        console.log(this.item)
     }
 }
 </script>

@@ -12,10 +12,10 @@
  - collapse about ceo text on mobile
 
 Before the day:
+ - code cleaning
  - remove the screen breakpoint text
  - fix the top padding
  - install vscode, git, ftp client
- - switch image service to use name instead of id
 
 Before the end:
  - remove artificial loading time

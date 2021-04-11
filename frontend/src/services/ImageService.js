@@ -41,18 +41,15 @@ class ImageService {
         }
     }
 
-    async getImage(id) {
-        const response = await this._collection.find().asArray()
-        let image
-        response.forEach(element => {
-            if(element._id.toString() === id) {
-                image = element
-            }
-        })
-        if(image) {
-            return image.file
+    async getImage(name) {
+        const response = await this._collection.find({ name: name }).asArray()
+        if(response[0]) {
+            return response[0]
         } else {
-            return ''
+            return {
+                name: '',
+                file: ''
+            }
         }
     }
     
