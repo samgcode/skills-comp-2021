@@ -41,6 +41,7 @@
                                     v-model="formdata.product"
                                     :class="{ error: validation[1] }"
                                 >
+                                    <option></option>
                                     <option
                                     v-for="product in products"
                                     :key="product.id"

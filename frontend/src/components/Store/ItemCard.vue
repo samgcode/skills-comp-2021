@@ -1,13 +1,14 @@
 <template>
     <body>
-        <div class="flex-1">
-            <img class="w-full max-h-96 object-fill cursor-pointer" :class="{ 'hover' : hover }" 
+        <div class="flex-1 cursor-pointer"
+            @mouseover="hover=true" 
+            @mouseleave="hover=false"
+            @click="openReviewForm()">
+            <img class="w-full max-h-96 object-fill" :class="{ 'hover' : hover }" 
                     :src="item.image.file" 
-                    :alt="item.image.name" 
-                    @mouseover="hover=true" 
-                    @mouseleave="hover=false"
-                    @click="openReviewForm()">
-            <h1 class="absolute top-5 left-5 text-xl" v-if="hover">Write a review</h1>
+                    :alt="item.image.name">
+            <h1 class="text-2xl text-green absolute top-5 left-5" v-if="hover">Write a review</h1>
+            <font-awesome-icon icon="edit" class="absolute top-20 left-36 fa-6x" style="color:#11fe48" transform="size-9" v-if="hover"/>
             <hr class="border-green border-3 w-full"/>
         </div>
         <div class="p-5">
@@ -83,6 +84,7 @@ export default {
 
 <style scoped>
 .hover {
+    filter: grayscale(1);
     filter: blur(5px);
     transition: filter 0.5s;
 }
