@@ -65,19 +65,9 @@
                             <lazy-image :name="'fred'" :classes="'object-cover rounded-full justify-center h-52 w-52 mx-auto'" data-aos="fade-up"/>
                             <h1 class="text-3xl pt-3" data-aos="fade-up">Fred Blam</h1>
                             <h2 class="text-2xl pt-3" data-aos="fade-up">Founder & CEO of RapidAir</h2>
-                            <p class="max-w-xl pt-2" data-aos="fade-right">Fred is the founder of rapidair.
-                                                     His story began as a struggling university student. 
-                                                     Someone who couldn't focus on school as he was distracted and fascinated with commerce, specifically e-commerce.</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-right">Mr. Blam. enjoys e-commerce as he feels it helps to make the world a smaller place. 
-                                                        With the Internet, we are able to reach farther than ever before, 
-                                                        and Mr. Blam is able to help others he wouldn't otherwise have been able to help!</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-right">Shortly after Fred completed his education at the University of Alberta in the School of business, 
-                                                        personal interests quickly took over. He ran a very successful security business, 
-                                                        but mainly dedicated his time in helping people secure mortgages in the finance world.</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-right">With Fred's passion on providing fresh clean air to everyone, 
-                                                        he has decided to put all of that aside and initiate a business that will allow people from all over the world to experience health and wellness. 
-                                                        Health and wellness they otherwise would not have been able to experience on a daily basis. With RapidAir, 
-                                                        we are able to bring a essential necessity, such as fresh clean air to anyone, anywhere.</p>
+                            <CEOText class="hidden xl:inline"/>
+                            <CEOText class="inline xl:hidden" v-if="this.showCEO"/>
+                            <button class="btn-secondary bg-blue-superdark hover:bg-blue-dark inline xl:hidden mt-3" @click="openCEO()">{{ceoButtonText}}</button>
                         </div>
                     </div>
 
@@ -86,19 +76,9 @@
                             <lazy-image :name="'jennifer'" :classes="'object-cover rounded-full justify-center h-52 w-52 mx-auto'" data-aos="fade-up"/>
                             <h1 class="text-3xl pt-3" data-aos="fade-up">Jennifer Right</h1>
                             <h2 class="text-2xl pt-3" data-aos="fade-up">Co-Founder & COO of RapidAir</h2>
-                            <p class="max-w-xl pt-2" data-aos="fade-left">Jennifer is the Co-founder and Chief Operating Officer for Vitalityair. 
-                                                        She brings a wealth of experience and knowledge to this business. 
-                                                        As a former commercial diver and Journeyman Red Seal Welder, 
-                                                        Jennifer is able to have a diverse understanding of the importance of delivering fresh clean air.</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-left">As Jennifer was growing up, he was always the first kid out the door and the last kid in. 
-                                                        Jennifer spent most of her youth being raised outdoors at the lake. 
-                                                        Her values and love of fresh air stemmed from those days at the lake with her Grandparents. 
-                                                        Growing up in Alberta, nature, fresh air and the great Canadian Rocky Mountains were never hard to find.</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-left">Jennifer feels right at home with nature. 
-                                                        That passion and love for nature will carry on through the products and our premium air that we will be delivering to you. 
-                                                        We believe that our customers should have the same opportunity to breathe the fresh air that we do.</p>
-                            <p class="max-w-xl pt-3" data-aos="fade-left">With Jennifer's hands on skills and Fred's passion for e-commerce, we together will offer an experience like no other. 
-                                                        No matter where you live in the world you too can breathe, clean, fresh air.</p>
+                            <COOText class="hidden xl:inline"/>
+                            <COOText class="inline xl:hidden" v-if="this.showCOO"/>
+                            <button class="btn-secondary bg-blue-superdark hover:bg-blue-dark inline xl:hidden mt-3" @click="openCOO()">{{cooButtonText}}</button>
                         </div>
                     </div>
 
@@ -133,15 +113,40 @@
 
 <script>
 import LazyImage from '@/components/LazyImage'
+import CEOText from '@/components/About/CEOText'
+import COOText from '@/components/About/COOText'
 
 export default {
     name: 'About',
     components: {
-        LazyImage
+        LazyImage,
+        CEOText,
+        COOText
     },
     data() {
         return {
-            
+            showCEO: false,
+            ceoButtonText: 'See more',
+            showCOO: false,
+            cooButtonText: 'See more'
+        }
+    },
+    methods: {
+        openCEO() {
+            this.showCEO = !this.showCEO
+            if(this.showCEO) {
+                this.ceoButtonText = 'Close'
+            } else {
+                this.ceoButtonText = 'See more'
+            }
+        },
+        openCOO() {
+            this.showCOO = !this.showCOO
+            if(this.showCOO) {
+                this.cooButtonText = 'Close'
+            } else {
+                this.cooButtonText = 'See more'
+            }
         }
     }
 }
