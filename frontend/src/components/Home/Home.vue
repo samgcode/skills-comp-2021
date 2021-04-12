@@ -52,8 +52,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex bg-blue-200 mt-10 py-5">
-            <div class="flex flex-wrap xl:mx-52 lg:mx-40 md:mx-32 sm:mx-10 mx-3">
+        <div class="flex justify-center bg-blue-200 mt-10 py-5">
+            <div class="flex flex-wrap px-5">
                 <div class="max-w-lg xl:mr-3 mr-6" data-aos="fade-up">
                     <h1 class="text-3xl font-semibold">Check out one of our locations</h1>
                     <h2 class="text-xl pb-5 pt-2">Rapid Air has 4 locations with full-service stores in Calgary, Edmonton, Lethbridge and Fort McMurray.</h2>
@@ -74,10 +74,5 @@ export default {
         LazyImage,
         StoreLocations
     },
-    data() {
-        return {
-            
-        }
-    }
 }
 </script>

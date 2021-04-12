@@ -1,5 +1,3 @@
-const fs = require('file-system')
-
 const files = [
     { name: 'plastic_bottles_2' },
     { name: 'plastic_bottle' },
@@ -14,13 +12,6 @@ const files = [
     { name: 'red_bottle' },
     { name: 'red_bottles_2' },
 ]
-
-function base64_encode(file) {
-    // read binary data
-    var bitmap = file
-    // convert binary data to base64 encoded string
-    return new Buffer(bitmap).toString('base64');
-}
 
 class ImageService {
     constructor(serviceLocator) {

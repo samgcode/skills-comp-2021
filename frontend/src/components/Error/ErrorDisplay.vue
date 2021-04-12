@@ -11,10 +11,5 @@ export default {
         error: Object,
         show: Boolean
     },
-    data() {
-        return {
-
-        }
-    }
 }
 </script>

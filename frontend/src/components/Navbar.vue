@@ -35,20 +35,19 @@
                 <div class="flex-1 flex items-center justify-end sm:items-stretch sm:justify-start px-5">
                     <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green rounded-sm" @click.native="open = false" exact>
                         <img class="block h-11 w-auto" src="@/assets/logo.png" alt="RapidAir">
-                        <!-- <h1 class="hidden lg:inline-block h-8 font-semibold text-white text-2xl pl-1 py-0">Name</h1> -->
                     </router-link>
                 </div>
             </div>
-            
         </nav>
-                <div class="sm:hidden text-white bg-blue-superdark" id="mobile-menu">
-                    <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
-                        <router-link :to="{ name: 'Home' }" class="nav-link block" exact @click.native="open = false">Home</router-link>
-                        <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link>
-                        <router-link :to="{ name: 'Contact' }" class="nav-link block" exact @click.native="open = false">Contact Us</router-link>
-                        <router-link :to="{ name: 'About' }" class="nav-link block" exact @click.native="open = false">About Us</router-link>
-                    </div>
-                </div>
+
+        <div class="sm:hidden text-white bg-blue-superdark" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
+                <router-link :to="{ name: 'Home' }" class="nav-link block" exact @click.native="open = false">Home</router-link>
+                <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link>
+                <router-link :to="{ name: 'Contact' }" class="nav-link block" exact @click.native="open = false">Contact Us</router-link>
+                <router-link :to="{ name: 'About' }" class="nav-link block" exact @click.native="open = false">About Us</router-link>
+            </div>
+        </div>
     </body>
 </template>
 

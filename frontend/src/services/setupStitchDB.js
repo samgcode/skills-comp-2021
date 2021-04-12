@@ -11,5 +11,3 @@ const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').d
 client.auth.loginWithCredential(new AnonymousCredential())
 
 export default db
-
-//96aad01f-c356-4312-8854-7a1363c68e60

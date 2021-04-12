@@ -20,10 +20,5 @@ export default {
     components: {
         FulfillingSquareSpinner 
     },
-    data() {
-        return {
-
-        }
-    },
 }
 </script>

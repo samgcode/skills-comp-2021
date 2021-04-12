@@ -3,14 +3,8 @@
     <header>
       <navbar />
     </header>    
-    <h1 class="2xl:inline hidden">3xl</h1>
-    <h1 class="2xl:hidden xl:inline hidden">2xl</h1>
-    <h1 class="xl:hidden lg:inline hidden">xl</h1>
-    <h1 class="lg:hidden md:inline hidden">lg</h1>
-    <h1 class="md:hidden sm:inline hidden">md</h1>
-    <h1 class="sm:hidden inline">sm</h1>
-
-    <router-view/>
+    
+    <router-view class="pt-5"/>
 
     <footer>
       <footbar />

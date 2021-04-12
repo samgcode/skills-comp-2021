@@ -1,13 +1,9 @@
 <template>
     <body>
         <div class="justify-center text-center" data-aos="fade-down">
-            <!-- <div> -->
-                <h1 class="text-5xl text-black">Our Products</h1>
-                <router-link :to="{ name: 'ReviewForm', params: { item: 'none' }}" class="btn-primary my-4 mr-4">Write a review</router-link>
-                <!-- <router-link :to="{ name: 'Contact' }" class="btn-secondary">Contact us</router-link> -->
-                <square-spinner :loading="loading"></square-spinner>
-            <!-- </div> -->
-
+            <h1 class="text-5xl text-black">Our Products</h1>
+            <router-link :to="{ name: 'ReviewForm', params: { item: 'none' }}" class="btn-primary my-4 mr-4">Write a review</router-link>
+            <square-spinner :loading="loading"></square-spinner>
         </div>
         <error-display :error="error" :show="errorOccured"></error-display>
         <div class="max-w-screen-xl mx-auto px-4">
