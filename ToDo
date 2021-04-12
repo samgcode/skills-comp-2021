@@ -1,12 +1,6 @@
  - write a list of reviews to be chaged on the day
 
  - change font for body text
- - item card bottom is fixed height
- - item card images 
-    - have max height 
-    - centered 
-    - scale down 
-    - white bg
  - add meta tags
  - collapse about ceo text on mobile
 
@@ -14,7 +8,6 @@ Before the day:
  - code cleaning
  - remove the screen breakpoint text
  - fix the top padding
- - install vscode, git, ftp client
 
 Before the end:
  - remove artificial loading time

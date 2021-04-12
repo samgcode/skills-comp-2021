@@ -1,17 +1,17 @@
 <template>
-    <body>
-        <div class="flex-1 cursor-pointer"
+    <div>
+        <div class="flex flex-col h-96 cursor-pointer"
             @mouseover="hover=true" 
             @mouseleave="hover=false"
             @click="openReviewForm()">
-            <img class="w-full max-h-96 object-fill" :class="{ 'hover' : hover }" 
+            <img class="w-full object-center m-auto max-h-96 object-scale" :class="{ 'hover' : hover }" 
                     :src="item.image.file" 
                     :alt="item.image.name">
             <h1 class="text-2xl text-green absolute top-5 left-5" v-if="hover">Write a review</h1>
-            <font-awesome-icon icon="edit" class="absolute top-20 left-36 fa-6x" style="color:#11fe48" transform="size-9" v-if="hover"/>
-            <hr class="border-green border-3 w-full"/>
+            <font-awesome-icon icon="edit" class="icon fa-6x" style="color:#11fe48" v-if="hover"/>
         </div>
-        <div class="p-5">
+        <hr class="border-green border-3 w-full"/>
+        <div class="p-5 bg-blue-superdark h-36  rounded-b-md">
             <h1 class="font-bold text-xl text-white mb-2">{{ item.name }}</h1>
             <div class="flex content-end text-xl justify-between pt-4">
                 <div class="flex text-xl" v-if="item.onSale">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
 </template>
 
 
@@ -87,5 +87,12 @@ export default {
     filter: grayscale(1);
     filter: blur(5px);
     transition: filter 0.5s;
+}
+
+.icon {
+      position: absolute;
+      left: 50%;
+      top: 33%;
+      transform: translate(-33%, -50%);
 }
 </style>
