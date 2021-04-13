@@ -70,6 +70,7 @@ import StoreLocations from '@/components/Home/StoreLocations'
 
 export default {
     name: 'Home',
+    title: 'RapidAir',
     components: {
         LazyImage,
         StoreLocations

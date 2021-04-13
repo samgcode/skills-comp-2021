@@ -7,8 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import App from './App.vue'
 import router from './router'
 import './index.css'
+import titleMixin from './Mixins/titleMixin'
+
 
 library.add(faEdit)
+
+Vue.mixin(titleMixin)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

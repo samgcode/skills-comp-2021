@@ -105,6 +105,7 @@ const reviewService = serviceLocator.services.reviewService
 
 export default {
     name: 'ReviewForm',
+    title: 'Write review',
     components: {
         SquareSpinner,
         StarRating,

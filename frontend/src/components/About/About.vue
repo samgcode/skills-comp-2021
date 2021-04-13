@@ -118,6 +118,7 @@ import COOText from '@/components/About/COOText'
 
 export default {
     name: 'About',
+    title: 'About us',
     components: {
         LazyImage,
         CEOText,

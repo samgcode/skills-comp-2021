@@ -58,6 +58,7 @@
 <script>
 export default {
     name: 'Contact',
+    title: 'Contact',
     data() {
         return {
             formdata: {

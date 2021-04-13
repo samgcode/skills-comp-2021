@@ -30,6 +30,7 @@ const itemService = serviceLocator.services.itemService
 
 export default {
     name: 'Store',
+    title: 'Store',
     components: {
         ItemCard,
         ReviewModal,
