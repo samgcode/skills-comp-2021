@@ -25,7 +25,7 @@
                                         Reviews for {{ item.name }}
                                     </h3>
                                 </div>
-                                <button type="button" @click="closeModal()" class="focus:outline-none focus:ring-2 ring-blue ring-offset-8 rounded-sm hover:fill-black fill-current">
+                                <button type="button" @click="closeModal()" class="focus:outline-none focus:ring-2 ring-secondary ring-offset-8 rounded-sm hover:fill-black fill-current">
                                     <svg class="h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="gray" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
                                     </svg>

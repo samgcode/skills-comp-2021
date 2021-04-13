@@ -7,15 +7,15 @@
             <img class="w-full object-center m-auto max-h-96 object-scale" :class="{ 'hover' : hover }" 
                     :src="item.image.file" 
                     :alt="item.image.name">
-            <h1 class="text-2xl text-green absolute top-5 left-5" v-if="hover">Write a review</h1>
+            <h1 class="text-2xl text-primary absolute top-5 left-5" v-if="hover">Write a review</h1>
             <font-awesome-icon icon="edit" class="icon fa-6x" style="color:#11fe48" v-if="hover"/>
         </div>
-        <hr class="border-green border-3 w-full"/>
+        <hr class="border-primary border-3 w-full"/>
         <div class="p-5 bg-blue-superdark h-36  rounded-b-md">
             <h1 class="font-bold text-xl text-white mb-2">{{ item.name }}</h1>
             <div class="flex content-end text-xl justify-between pt-4">
                 <div class="flex text-xl" v-if="item.onSale">
-                    <h2 class="text-green line-through pr-1">${{ item.price }}</h2>
+                    <h2 class="text-primary line-through pr-1">${{ item.price }}</h2>
                     <h2 class="text-white">${{ item.salePrice }}</h2>
                 </div>
                 <div class="flex text-xl" v-if="!item.onSale">

@@ -57,7 +57,7 @@
                                                                                         We're committed to delivering the best, 
                                                                                         and our customers are getting an unsurpassed product as a result.</h1>
         <div class="full-width-container bg-blue-superdark mt-36" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
-            <hr class="border-green border-4 mt-8"/>
+            <hr class="border-primary border-4 mt-8"/>
             <div class="w-full text-center text-white">
                 <div class="flex flex-wrap flex-row justify-center pt-10 gap-10 pb-10">
                     <div class="flex flex-col">
@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="full-width-container flex justify-center bg-blue shadow-lg" data-aos="slide-up">
+        <div class="full-width-container flex justify-center bg-secondary shadow-lg" data-aos="slide-up">
             <h1 class="text-white text-2xl pt-4 pb-16 font-semibold max-w-7xl">Fred will use his experience in personal security, as well as his sales experience with mortgages to head up RapidAir to ensure that we are constantly progressing towards perfection.</h1>
         </div>
 

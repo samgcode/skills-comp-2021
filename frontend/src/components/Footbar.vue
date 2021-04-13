@@ -1,7 +1,7 @@
 <template>
     <div class="bg-blue-superdark mt-52" data-aos="fade-in">
         <div class="container pb-24 max-w-full">
-            <hr class="border-green border-3"/>
+            <hr class="border-primary border-3"/>
             <div class="flex sm:pl-20 pl-8 pt-10">
                 <div class="text-white text-left max-w-md pr-10" data-aos="fade-up" data-aos-delay="100">
                     <h1 class="text-2xl">Operating hours</h1>

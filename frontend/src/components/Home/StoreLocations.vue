@@ -1,7 +1,7 @@
 <template>
     <body>
         <EmbedMap :mapSrc="mapURL" :key="mapRerenderKey"/>
-        <select v-model="cityName" class="text-xl rounded-md bg-green p-2 my-2" data-aos="fade-up">
+        <select v-model="cityName" class="text-xl rounded-md bg-primary p-2 my-2" data-aos="fade-up">
             <option class="dropdown-item">Calgary</option>
             <option class="dropdown-item">Edmonton</option>
             <option class="dropdown-item">Lethbridge</option>
@@ -61,6 +61,6 @@ export default {
 
 <style scoped>
 .dropdown-item {
-    @apply text-blue bg-white;
+    @apply text-secondary bg-white;
 }
 </style>

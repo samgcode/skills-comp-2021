@@ -15,7 +15,7 @@
                                 Please use the form to write a review for one of our products
                             </p>
                             </div>
-                            <hr class="border-green border-3" />
+                            <hr class="border-primary border-3" />
                             <div class="text-xl pt-4 px-4 bg-white max-w-full">
                             <form @submit.prevent="submitForm()" @change="validateForm">
                                 <div class="mb-4">

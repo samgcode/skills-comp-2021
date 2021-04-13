@@ -7,7 +7,7 @@
                         <h1 class="text-white text-3xl">Contact RapidAir</h1>
                         <p class="text-white text-lg">Please use the form to send us your message or ideas. Or simply pop in and say, hi!</p>
                     </div>
-                    <hr class="border-green border-3"/>
+                    <hr class="border-primary border-3"/>
                     <div class="text-xl pt-4 px-4 bg-white max-w-full">
                         <form @submit.prevent="submitForm()" @change="validateForm">
                             <div class="mb-4">

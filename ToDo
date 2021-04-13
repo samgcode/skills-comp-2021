@@ -1,5 +1,4 @@
  - write a list of reviews to be chaged on the day
- - rename colors
  - change font for body text
 
 Before the day:
@@ -9,6 +8,7 @@ Things to change:
  - meta tags
  - text
  - colors
+   - make sure to chage stars, icons, loaders, etc
  - images
  - reviews
  - items

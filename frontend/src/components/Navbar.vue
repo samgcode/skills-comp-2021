@@ -2,7 +2,7 @@
     <body>
         <nav class="flex bg-blue-superdark col-span-1 justify-between sm:h-20">
             <div class="block py-2">
-                <div class="bg-primary mx-auto px-2 sm:px-6 lg:px-8 py-0">
+                <div class="bg-blue-superdark mx-auto px-2 sm:px-6 lg:px-8 py-0">
                     <div class="relative flex items-center justify-between h-16">
                         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                             <button type="button" @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 active:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -31,9 +31,9 @@
 
             </div>
 
-            <div class="flex bg-blue content-center border-l-8 border-green px-4 py-4">
+            <div class="flex bg-secondary content-center border-l-8 border-primary px-4 py-4">
                 <div class="flex-1 flex items-center justify-end sm:items-stretch sm:justify-start px-5">
-                    <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-green rounded-sm" @click.native="open = false" exact>
+                    <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-primary rounded-sm" @click.native="open = false" exact>
                         <img class="block h-11 w-auto" src="@/assets/logo.png" alt="RapidAir">
                     </router-link>
                 </div>

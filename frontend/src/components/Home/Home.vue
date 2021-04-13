@@ -3,7 +3,7 @@
         <div class="xl:mx-52 sm:mx-10">
             <div class="px-8 py-4 lg:flex justify-between">
                 <div  data-aos="fade-right">
-                    <h1 class="mt-6 text-6xl">Rapid<span class="text-green">Air</span></h1>
+                    <h1 class="mt-6 text-6xl">Rapid<span class="text-primary">Air</span></h1>
                     <h2 class="text-3xl text-gray-500">A better way to breath</h2>
                     <div class="mt-6">
                         <router-link :to="{ name: 'About' }" class="btn-primary">About us</router-link>
@@ -14,14 +14,14 @@
             </div>
         </div>
         <div class="full-width-container bg-blue-superdark" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
-            <hr class="border-green border-4 mt-8"/>
+            <hr class="border-primary border-4 mt-8"/>
             <h1 class="text-3xl text-white pt-6">We are committed to delivering the best air possible.</h1>
-            <hr class="border-green border-3 mt-8 max-w-min px-10 mx-auto"/>
+            <hr class="border-primary border-3 mt-8 max-w-min px-10 mx-auto"/>
             <h2 class="white-subheading">Remember the days when people laughed off bottled water?</h2>
             <h2 class="white-subheading">“It comes out of the tap, why would I want a bottle?”</h2>
             <h2 class="white-subheading pb-8">The truth is we have begun to appreciate the clean, pure and refreshing taste of quality water.</h2>
         </div>
-        <div class="full-width-container bg-blue shadow-lg" data-aos="slide-up" data-aos-delay="50">
+        <div class="full-width-container bg-secondary shadow-lg" data-aos="slide-up" data-aos-delay="50">
             <h1 class="text-white text-2xl pt-4 pb-16 font-semibold">Air is going the same direction.</h1>
         </div>
 
@@ -32,7 +32,7 @@
             </div>
             <div class="flex flex-wrap justify-center gap-8 pt-10">
                 <div class="text-left max-w-md">
-                    <h2 class="text-blue text-xl" data-aos="fade-right">Banf Air</h2>
+                    <h2 class="text-secondary text-xl" data-aos="fade-right">Banf Air</h2>
                     <p class="py-3" data-aos="fade-right">
                         What’s top of mind when you think about glacier mountains and sprawling green forest? For most, it’s a striking view, an untouched landscape, and deep breaths of pure, natural air. That’s what we pictured when we started thinking about serving the best air to people around the world.
                     </p>
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="text-left max-w-md">
-                    <h2 class="text-blue text-xl" data-aos="fade-left">Lake Louise Air</h2>
+                    <h2 class="text-secondary text-xl" data-aos="fade-left">Lake Louise Air</h2>
                     <p class="py-3" data-aos="fade-left">
                         For nature lovers, Lake Louise is a favourite destination. A picture perfect emerald lake is crowned by white-tipped mountain ranges. The giant blue lake instantly pulls you in as it contrasts with lush green trees and white tipped Rocky Mountains. In the winter, it becomes a paradise of powdery white snow.
                     </p>
