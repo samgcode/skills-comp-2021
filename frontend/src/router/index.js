@@ -6,6 +6,7 @@ import Store from '../components/Store/Store'
 import Contact from '../components/Contact/Contact'
 import About from '../components/About/About'
 import ReviewForm from '../components/ReviewForm/ReviewForm'
+import QuoteCalculator from '../components/QuoteCalculator/QuoteCalculator'
 
 Vue.use(VueRouter)
 
@@ -14,7 +15,7 @@ const routes = [{
         name: 'Home',
         component: Home
     }, {
-        path: '/Store',
+        path: '/Services',
         name: 'Store',
         component: Store
     }, {
@@ -30,6 +31,10 @@ const routes = [{
         name: 'ReviewForm',
         component: ReviewForm,
     }, {
+        path: '/Calculator/',
+        name: 'Calculator',
+        component: QuoteCalculator,
+    },{
         path: '/*',
         redirect: { name: 'route-name' }
     }

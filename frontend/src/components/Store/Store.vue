@@ -35,7 +35,7 @@ const itemService = serviceLocator.services.itemService
 
 export default {
     name: 'Store',
-    title: 'Store',
+    title: 'Services',
     components: {
         ItemCard,
         ErrorDisplay,
