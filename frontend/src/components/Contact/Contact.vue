@@ -3,9 +3,10 @@
         <div class="flex max-w-8xl">
             <div class="p-10">  
                 <div class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-superdark">
-                    <div class="px-8 pt-8 pb-4">
-                        <h1 class="text-white text-3xl">Contact RapidAir</h1>
-                        <p class="text-white text-lg">Please use the form to send us your message or ideas. Or simply pop in and say, hi!</p>
+                    <div class="px-8 pt-8 pb-4 md:max-w-3xl sm:max-w-xl max-w-sm">
+                        <h1 class="text-white text-3xl">Contact GreenThumb</h1>
+                        <p class="text-white text-lg pb-3">At every stage of every project we take on, we believe communication is key.</p>
+                        <p class="text-white text-lg">So whether you have a question about our services or you’d like a quote, send us a note to discuss the details. It’s always no-obligation, so don’t worry about it!</p>
                     </div>
                     <hr class="border-primary border-3"/>
                     <div class="text-xl pt-4 px-4 bg-white max-w-full">
