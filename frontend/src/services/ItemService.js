@@ -36,3 +36,14 @@ class ItemService {
 }
 
 export default ItemService
+
+/*
+{
+    name: str
+    price: int
+    price xtra text: str
+    hr/sqft/: str
+    comercial: true/false
+}
+
+*/
