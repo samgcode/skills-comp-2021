@@ -32,9 +32,9 @@
             </div>
 
             <div class="flex bg-secondary content-center border-l-8 border-primary px-4 py-4">
-                <div class="flex-1 flex items-center justify-end sm:items-stretch sm:justify-start px-5">
+                <div class="flex-1 flex items-center justify-end sm:items-stretch sm:justify-start">
                     <router-link :to="{ name: 'Home' }" class="flex-shrink-0 flex items-center focus:outline-none focus:ring focus:ring-offset-1 focus:ring-primary rounded-sm" @click.native="open = false" exact>
-                        <img class="block h-11 w-auto" src="@/assets/logo.png" alt="RapidAir">
+                        <img class="block h-16 w-auto" src="@/assets/GreenThumbLogoW.svg" alt="RapidAir">
                     </router-link>
                 </div>
             </div>
