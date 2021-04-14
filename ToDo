@@ -9,7 +9,6 @@ Before the day:
 
 
 Things to change:
- - meta tags
  - text
  - colors
    - make sure to chage stars, icons, loaders, etc
@@ -17,6 +16,7 @@ Things to change:
  - db images
  - items
  - reviews
+ - meta tags
 
 Before the end:
  - remove populate code from image service

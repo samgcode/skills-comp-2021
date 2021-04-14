@@ -28,17 +28,18 @@ module.exports = {
                     superdark: '#1F2937'
                 },
                 primary: {
-                    superlight: '#66ff8a',
-                    light: '#42ff6e',
+                    superlight: '#8CFFA8',
+                    light: '#5EFF84',
                     DEFAULT: '#11fe48',
-                    dark: '#10e645'
+                    dark: '#02CC5F',
+                    superdark: '#044012'
                 },
                 secondary: {
-                    ultralight: '#cfe1ff',
-                    superlight: '#e8f3fc',
-                    light: '#478dfc',
-                    DEFAULT: '#3b83f6',
-                    dark: '#3375de'
+                    ultralight: '#D7AEEB',
+                    superlight: '#CA98EA',
+                    light: '#AC50E6',
+                    DEFAULT: '#900BE0',
+                    dark: '#6E09AD'
                 },
                 superdark: {
                     DEFAULT: '#1F2937'
