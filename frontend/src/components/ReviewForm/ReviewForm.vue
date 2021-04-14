@@ -31,27 +31,6 @@
                                 />
                                 </div>
                                 <div class="mb-4">
-                                <label class="form-label" for="product">Product</label>
-                                <span class="sr-only">product input</span>
-                                <select
-                                    class="form-input"
-                                    id="product"
-                                    type="text"
-                                    placeholder="product"
-                                    v-model="formdata.product"
-                                    :class="{ error: validation[1] }"
-                                >
-                                    <option></option>
-                                    <option
-                                    v-for="product in products"
-                                    :key="product.id"
-                                    :value="product.id"
-                                    >
-                                    {{ product.name }}
-                                    </option>
-                                </select>
-                                </div>
-                                <div class="mb-4">
                                 <label class="form-label" for="rating">Rating</label>
                                 <span class="sr-only">star rating input</span>
                                 <star-rating 
@@ -72,7 +51,7 @@
                                     id="review"
                                     placeholder="Review"
                                     v-model="formdata.review"
-                                    :class="{ error: validation[2] }"
+                                    :class="{ error: validation[1] }"
                                 />
                                 </div>
                             </form>
@@ -102,7 +81,6 @@ import ErrorDisplay from '@/components/Error/ErrorDisplay'
 import Colors from '../../colors'
 
 const colors = new Colors()
-const itemService = serviceLocator.services.itemService
 const reviewService = serviceLocator.services.reviewService
 
 export default {
@@ -117,12 +95,10 @@ export default {
         return {
             formdata: {
                 name: '',
-                product: '',
                 rating: 0,
                 review: ''
             },
             validation: [],
-            products: [],
             errorOccured: false,
             errorData: {},
             loading: true,
@@ -132,7 +108,7 @@ export default {
     },
     methods: {
         async submitForm() {     
-             this.hasSubmitted = true
+            this.hasSubmitted = true
             this.errorOccured = false
             if(this.validateForm()) {
                 this.loading = true
@@ -141,7 +117,6 @@ export default {
                         this.formdata.name, 
                         this.formdata.rating, 
                         this.formdata.review, 
-                        this.formdata.product
                     )
                     this.loading = false
                     this.$router.push({
@@ -160,7 +135,6 @@ export default {
         validateForm() {
             this.validation = [
                 false,
-                false,
                 false
             ]
             let valid = true;
@@ -168,47 +142,23 @@ export default {
                 this.validation[0] = true
                 valid = false
             }
-            if(this.formdata.product === '') {
-                this.validation[1] = true
-                valid = false
-            }
             if(this.formdata.rating < 0) {
                 this.ratingBorderColor = '#DC3545';
                 valid = false;
             }
             if(this.formdata.review === '') {
-                this.validation[2] = true
+                this.validation[1] = true
                 valid = false
             }
-            console.log(this.validation)
             return valid
-        },
-        async getProducts() {
-            this.errorOccured = false
-            try {
-                this.products = await itemService.getItems()
-                this.loading = false
-                
-            } catch(err) {
-                this.loading = false
-                this.errorOccured = true
-                this.errorData = {
-                    message: 'Error occured while trying to fetch review form'
-                }
-            }
-            if(!this.errorOccured && !this.loading) {
-                this.displayForm = true
-            }
         },
         ratingSelected: function() {
             this.ratingBorderColor = ''
         }
     },
     mounted() {
-        this.formdata.product = this.$route.params.item
-        console.log(this.formdata)
-        this.getProducts()
         this.primaryColor = colors.primary
+        this.loading = false
     }
 }
 </script>

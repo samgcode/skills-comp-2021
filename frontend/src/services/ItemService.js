@@ -7,28 +7,23 @@ class ItemService {
 
     async getItems() {
         const items = await this._collection.find().toArray()
-        const itemsRatingAverage = await this._reviewService._getItemsRatingAverage(items)
 
         const convertedItems = await Promise.all(items.map(async (item) => {
-            const itemId = item._id.toString()
-            const ratingAverage = itemsRatingAverage.find((itemRatingAverage) => {
-                return itemRatingAverage.id === itemId
-            })
             item.imageFile = await this._imageService.getImage(item.image)
-            const convertedItem = this._convertItem(item, ratingAverage)
+            const convertedItem = this._convertItem(item)
             return convertedItem
         }))
         return convertedItems
     }
 
-    _convertItem(item, average) {
+    _convertItem(item) {
         const convertedItem = {
             image: item.imageFile,
             name: item.name,
-            onSale: item.onSale,
             price: item.price,
-            salePrice: item.salePrice,
-            average: average.average,
+            priceExtra: item.priceExtraText,
+            per: item.per,
+            commercial: item.commercial,
             id: item._id.toString(),
         }
         return convertedItem
@@ -40,9 +35,10 @@ export default ItemService
 /*
 {
     name: str
+    image: str
     price: int
     price xtra text: str
-    hr/sqft/: str
+    per: str (hr/sqft/)
     comercial: true/false
 }
 
