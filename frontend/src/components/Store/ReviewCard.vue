@@ -6,7 +6,7 @@
                     <div class="px-4 py-4">
                         <div class="flex">
                             <h1 class="text-xl pr-3">{{ review.username }}</h1>
-                            <star-rating class="pb-2" :read-only="true" :rating="parseInt(review.rating)" :star-size="23" :active-color="'#11fe48'"></star-rating>
+                            <star-rating class="pb-2" :read-only="true" :rating="parseInt(review.rating)" :star-size="23" :active-color="primaryColor"></star-rating>
                         </div>
                         <p class="text-gray-500 text-sm">
                             {{ review.review }}
@@ -21,6 +21,9 @@
 
 <script>
 import StarRating from 'vue-star-rating'
+import Colors from '../../colors'
+
+const colors = new Colors()
 
 export default {
     name: 'ItemCard',
@@ -32,8 +35,11 @@ export default {
     },
     data() {
         return {
-            
+            primaryColor: ''
         }
+    },
+    mounted() {
+        this.primaryColor = colors.primary
     }
 }
 </script>

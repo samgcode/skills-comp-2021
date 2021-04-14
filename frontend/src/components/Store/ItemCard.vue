@@ -8,7 +8,7 @@
                     :src="item.image.file" 
                     :alt="item.image.name">
             <h1 class="text-2xl text-primary absolute top-5 left-5" v-if="hover">Write a review</h1>
-            <font-awesome-icon icon="edit" class="icon fa-6x" style="color:#11fe48" v-if="hover"/>
+            <font-awesome-icon icon="edit" class="icon fa-6x" :style="{ color: primaryColor }" v-if="hover"/>
         </div>
         <hr class="border-primary border-3 w-full"/>
         <div class="p-5 bg-superdark h-36  rounded-b-md">
@@ -22,7 +22,7 @@
                     <h2 class="text-white">${{ item.price }}</h2>
                 </div>
                 <div class="flex justify-end">
-                    <star-rating class="pr-1 pb-1" :read-only="true" :rating="parseInt(item.average)" :star-size="20" :text-class="'hidden'" :active-color="'#11fe48'"></star-rating>
+                    <star-rating class="pr-1 pb-1" :read-only="true" :rating="parseInt(item.average)" :star-size="20" :text-class="'hidden'" :active-color="primaryColor"></star-rating>
                     <button type="button" class="btn-primary btn-primary-sm" @click="showModal()">
                         Reviews
                     </button>
@@ -36,7 +36,9 @@
 <script>
 import serviceLocator from '@/services/serviceLocator'
 import StarRating from 'vue-star-rating'
+import Colors from '../../colors'
 
+const colors = new Colors()
 const reviewService = serviceLocator.services.reviewService
 
 export default {
@@ -52,7 +54,8 @@ export default {
             showReviews: false,
             itemId: '',
             reviews: [],
-            hover: false
+            hover: false,
+            primaryColor: ''
         }
     },
     methods: {
@@ -78,6 +81,7 @@ export default {
     },
     mounted() {
         this.itemId = this.item.id
+        this.primaryColor = colors.primary
     }
 }
 </script>

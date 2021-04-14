@@ -1,6 +1,3 @@
- - add light and dark primary colors
- - add variables for colors/icons search in project
- - change colors to something else
  - make populate images into sperate script
  - lookup favicon not working on server
  - router not working on server (reload)

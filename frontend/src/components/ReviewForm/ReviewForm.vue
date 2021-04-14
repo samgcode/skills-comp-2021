@@ -60,7 +60,7 @@
                                         :border-color="ratingBorderColor"
                                         :border-width="2"
                                         :show-rating="false"
-                                        :active-color="'#11fe48'"
+                                        :active-color="primaryColor"
                                         @rating-selected="ratingSelected"
                                     > </star-rating>
                                 </div>
@@ -99,7 +99,9 @@ import serviceLocator from '@/services/serviceLocator'
 import SquareSpinner from '@/components/Spinners/SquareSpinner'
 import StarRating from 'vue-star-rating'
 import ErrorDisplay from '@/components/Error/ErrorDisplay'
+import Colors from '../../colors'
 
+const colors = new Colors()
 const itemService = serviceLocator.services.itemService
 const reviewService = serviceLocator.services.reviewService
 
@@ -125,6 +127,7 @@ export default {
             errorData: {},
             loading: true,
             ratingBorderColor: '',
+            primaryColor: ''
         }
     },
     methods: {
@@ -205,6 +208,7 @@ export default {
         this.formdata.product = this.$route.params.item
         console.log(this.formdata)
         this.getProducts()
+        this.primaryColor = colors.primary
     }
 }
 </script>

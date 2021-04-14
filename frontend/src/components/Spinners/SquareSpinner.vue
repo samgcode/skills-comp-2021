@@ -4,13 +4,16 @@
             class="mx-auto mt-5"
             :animation-duration="2000"
             :size="50"
-            color="#11fe48"
+            :color="primaryColor"
         />
     </div>
 </template>
 
 <script>
 import { FulfillingSquareSpinner } from 'epic-spinners'
+import Colors from '../../colors'
+
+const colors = new Colors()
 
 export default {
     name: 'SquareSpinner',
@@ -20,5 +23,13 @@ export default {
     components: {
         FulfillingSquareSpinner 
     },
+    data() {
+        return {
+            primaryColor: ''
+        }
+    },
+    mounted() {
+        this.primaryColor = colors.primary
+    }
 }
 </script>
