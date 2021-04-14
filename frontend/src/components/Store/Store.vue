@@ -21,7 +21,7 @@
 
 <script>
 import ItemCard from '@/components/Store/ItemCard.vue'
-import ReviewModal from '@/components/Store/ReviewModal.vue'
+import ReviewModal from '@/components/Reviews/ReviewDisplay.vue'
 import ErrorDisplay from '@/components/Error/ErrorDisplay'
 import serviceLocator from '@/services/serviceLocator'
 import SquareSpinner from '@/components/Spinners/SquareSpinner'

@@ -26,10 +26,9 @@ const routes = [{
         name: 'About',
         component: About
     }, {
-        path: '/ReviewForm/:item',
+        path: '/ReviewForm/',
         name: 'ReviewForm',
         component: ReviewForm,
-        props: true
     }, {
         path: '/*',
         redirect: { name: 'route-name' }

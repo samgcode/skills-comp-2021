@@ -44,3 +44,12 @@ class ReviewService {
 }
 
 export default ReviewService
+
+/*
+{
+    username: str,
+    rating: int,
+    review: str,
+    
+}
+*/

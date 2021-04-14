@@ -20,7 +20,7 @@
                             <div class="hidden sm:block sm:ml-6">
                                 <div class="flex space-x-4">
                                     <router-link :to="{ name: 'Home' }" class="nav-link" exact>Home</router-link>
-                                    <!-- <router-link :to="{ name: 'Store' }" class="nav-link" exact>Store</router-link> -->
+                                    <router-link :to="{ name: 'Store' }" class="nav-link" exact>Store</router-link>
                                     <router-link :to="{ name: 'Contact' }" class="nav-link" exact>Contact Us</router-link>
                                     <router-link :to="{ name: 'About' }" class="nav-link" exact>About Us</router-link>
                                 </div>
@@ -43,7 +43,7 @@
         <div class="sm:hidden text-white bg-superdark" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
                 <router-link :to="{ name: 'Home' }" class="nav-link block" exact @click.native="open = false">Home</router-link>
-                <!-- <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link> -->
+                <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link>
                 <router-link :to="{ name: 'Contact' }" class="nav-link block" exact @click.native="open = false">Contact Us</router-link>
                 <router-link :to="{ name: 'About' }" class="nav-link block" exact @click.native="open = false">About Us</router-link>
             </div>

@@ -8,7 +8,7 @@
         leave-from-class="opacity-100"
         leave-to-class="opacity-0"
         >       
-            <div class="fixed overflow-hidden z-10 inset-0" v-show="showReviews">
+            <div class="fixed overflow-hidden z-10 inset-0" v-show="params.showReviews">
                 <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 overflow-hidden">
                     <div class="fixed inset-0 transition-opacity" aria-hidden="true">
                         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -22,7 +22,7 @@
                             <div class="sm:flex sm:items-start justify-between">
                                 <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                     <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
-                                        Reviews for {{ item.name }}
+                                        Reviews for GreenThumb
                                     </h3>
                                 </div>
                                 <button type="button" @click="closeModal()" class="focus:outline-none focus:ring-2 ring-secondary ring-offset-8 rounded-sm hover:fill-black fill-current">
@@ -32,13 +32,13 @@
                                 </button>
                             </div>
                             <div class="mt-2 flex-row grid-cols-1 xl:h-2xl md:h-96 overflow-auto mb-20">
-                                <error-display :error="error" :show="showError"></error-display>
-                                <square-spinner :loading="loading"></square-spinner>
-                                <div v-if="!showError">
-                                    <div v-if="hasReviews">
-                                        <review-card :review="review"  data-aos="fade-up" v-for="review in reviews" :key="review.id"/>
+                                <error-display :error="params.error" :show="params.showError"></error-display>
+                                <square-spinner :loading="params.loading"></square-spinner>
+                                <div v-if="!params.showError">
+                                    <div v-if="params.hasReviews">
+                                        <review-card :review="review"  data-aos="fade-up" v-for="review in params.reviews" :key="review.id"/>
                                     </div>
-                                    <div v-if="!hasReviews && !loading">
+                                    <div v-if="!params.hasReviews && !params.loading">
                                         <div class="flex max-w-7xl" data-aos="fade-up">
                                             <div class="pt-5 sm:pl-9">  
                                                 <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
@@ -71,20 +71,21 @@
 </template>
 
 <script>
-import ReviewCard from '@/components/Store/ReviewCard.vue'
+import ReviewCard from '@/components/Reviews/ReviewCard.vue'
 import ErrorDisplay from '@/components/Error/ErrorDisplay'
 import SquareSpinner from '@/components/Spinners/SquareSpinner'
 
 export default {
-    name: 'ReviewModal',
+    name: 'ReviewDisplay',
     props: {
-        showReviews: Boolean,
-        hasReviews: Boolean,
-        reviews: Array,
-        item: Object,
-        showError: Boolean,
-        error: Object,
-        loading: Boolean
+        params: {
+            showReviews: Boolean,
+            hasReviews: Boolean,
+            reviews: Array,
+            showError: Boolean,
+            error: Object,
+            loading: Boolean
+        }
     },
     components: {
         ReviewCard,
@@ -103,9 +104,6 @@ export default {
         openReviewForm() {
             this.$router.push({
                 name: `ReviewForm`,
-                params: {
-                    item: this.item.id
-                }
             });
         }
     },
