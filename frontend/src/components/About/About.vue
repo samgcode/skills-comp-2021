@@ -90,42 +90,17 @@
 
 <script>
 import LazyImage from '@/components/LazyImage'
-import CEOText from '@/components/About/CEOText'
-import COOText from '@/components/About/COOText'
 
 export default {
     name: 'About',
     title: 'About us',
     components: {
         LazyImage,
-        CEOText,
-        COOText
     },
     data() {
         return {
-            showCEO: false,
-            ceoButtonText: 'See more',
-            showCOO: false,
-            cooButtonText: 'See more'
+
         }
     },
-    methods: {
-        openCEO() {
-            this.showCEO = !this.showCEO
-            if(this.showCEO) {
-                this.ceoButtonText = 'Close'
-            } else {
-                this.ceoButtonText = 'See more'
-            }
-        },
-        openCOO() {
-            this.showCOO = !this.showCOO
-            if(this.showCOO) {
-                this.cooButtonText = 'Close'
-            } else {
-                this.cooButtonText = 'See more'
-            }
-        }
-    }
 }
 </script>
