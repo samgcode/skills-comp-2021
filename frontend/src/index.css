@@ -12,11 +12,11 @@
 }
 
 .nav-link {
-    @apply text-gray-400 border-t-8 h-20 pt-5 px-10 border-transparent hover:bg-green-dark hover:text-white focus:outline-none focus:text-white active:bg-green-superlight px-2 py-1 text-xl font-semibold;
+    @apply text-gray-400 border-t-8 h-20 pt-5 px-10 border-transparent hover:bg-primary-dark hover:text-white focus:outline-none focus:text-white active:bg-primary-superlight px-2 py-1 text-xl font-semibold;
 }
 
 .nav-link.router-link-active {
-    @apply text-primary border-primary active:bg-green-superlight hover:text-white focus:underline;
+    @apply text-primary border-primary active:bg-primary-superlight hover:text-white focus:underline;
 }
 
 .btn-primary {
@@ -24,11 +24,11 @@
 }
 
 .btn-primary:hover {
-    @apply bg-green-dark;
+    @apply bg-primary-dark;
 }
 
 .btn-primary:active {
-    @apply bg-green-light;
+    @apply bg-primary-light;
 }
 
 .btn-secondary {
@@ -36,7 +36,7 @@
 }
 
 .btn-secondary:hover {
-    @apply bg-blue-200;
+    @apply bg-secondary-superlight;
 }
 
 .btn-secondary:active {

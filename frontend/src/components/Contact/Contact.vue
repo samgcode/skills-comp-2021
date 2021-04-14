@@ -2,7 +2,7 @@
     <div class="flex justify-center" data-aos="fade-up">
         <div class="flex max-w-8xl">
             <div class="p-10">  
-                <div class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-blue-superdark">
+                <div class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-superdark">
                     <div class="px-8 pt-8 pb-4">
                         <h1 class="text-white text-3xl">Contact RapidAir</h1>
                         <p class="text-white text-lg">Please use the form to send us your message or ideas. Or simply pop in and say, hi!</p>

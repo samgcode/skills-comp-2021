@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-superdark mt-52" data-aos="fade-in">
+    <div class="bg-superdark mt-52" data-aos="fade-in">
         <div class="container pb-24 max-w-full">
             <hr class="border-primary border-3"/>
             <div class="flex sm:pl-20 pl-8 pt-10">

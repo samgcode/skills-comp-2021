@@ -13,7 +13,7 @@
                 <lazy-image :name="'mountain'" :classes="'object-contain h-96 lg:pt-0 pt-4'" data-aos="fade"/>
             </div>
         </div>
-        <div class="full-width-container bg-blue-superdark" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
+        <div class="full-width-container bg-superdark" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
             <hr class="border-primary border-4 mt-8"/>
             <h1 class="text-3xl text-white pt-6">We are committed to delivering the best air possible.</h1>
             <hr class="border-primary border-3 mt-8 max-w-min px-10 mx-auto"/>
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center bg-blue-200 mt-10 py-5">
+        <div class="flex justify-center bg-light mt-10 py-5">
             <div class="flex flex-wrap px-5">
                 <div class="max-w-lg xl:mr-3 mr-6" data-aos="fade-up">
                     <h1 class="text-3xl font-semibold">Check out one of our locations</h1>

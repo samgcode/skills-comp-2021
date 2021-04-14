@@ -11,7 +11,7 @@
             <font-awesome-icon icon="edit" class="icon fa-6x" style="color:#11fe48" v-if="hover"/>
         </div>
         <hr class="border-primary border-3 w-full"/>
-        <div class="p-5 bg-blue-superdark h-36  rounded-b-md">
+        <div class="p-5 bg-superdark h-36  rounded-b-md">
             <h1 class="font-bold text-xl text-white mb-2">{{ item.name }}</h1>
             <div class="flex content-end text-xl justify-between pt-4">
                 <div class="flex text-xl" v-if="item.onSale">

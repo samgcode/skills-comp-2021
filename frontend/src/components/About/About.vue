@@ -6,7 +6,7 @@
                 <h2 class="text-2xl text-gray-400">RapidAir, a better way to breathe</h2>
             </div>
         </div>
-        <div class="w-full bg-blue-200 mt-32 text-center">
+        <div class="w-full bg-light mt-32 text-center">
             <div class="flex flex-wrap flex-row justify-center pt-10 gap-6 pb-10">
                 <div class="flex flex-col">
                     <div class="flex-1 justify-center" data-aos="fade-left" data-aos-delay="100">
@@ -56,7 +56,7 @@
                                                                                         and we knew there was a better way of giving it to people. 
                                                                                         We're committed to delivering the best, 
                                                                                         and our customers are getting an unsurpassed product as a result.</h1>
-        <div class="full-width-container bg-blue-superdark mt-36" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
+        <div class="full-width-container bg-superdark mt-36" data-aos="fade-in" data-aos-duration="600" data-aos-delay="100">
             <hr class="border-primary border-4 mt-8"/>
             <div class="w-full text-center text-white">
                 <div class="flex flex-wrap flex-row justify-center pt-10 gap-10 pb-10">
@@ -67,7 +67,7 @@
                             <h2 class="text-2xl pt-3" data-aos="fade-up">Founder & CEO of RapidAir</h2>
                             <CEOText class="hidden xl:inline"/>
                             <CEOText class="inline xl:hidden" v-if="this.showCEO"/>
-                            <button class="btn-secondary bg-blue-superdark hover:bg-blue-dark inline xl:hidden mt-3" @click="openCEO()">{{ceoButtonText}}</button>
+                            <button class="btn-secondary bg-superdark hover:bg-secondary-dark inline xl:hidden mt-3" @click="openCEO()">{{ceoButtonText}}</button>
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@
                             <h2 class="text-2xl pt-3" data-aos="fade-up">Co-Founder & COO of RapidAir</h2>
                             <COOText class="hidden xl:inline"/>
                             <COOText class="inline xl:hidden" v-if="this.showCOO"/>
-                            <button class="btn-secondary bg-blue-superdark hover:bg-blue-dark inline xl:hidden mt-3" @click="openCOO()">{{cooButtonText}}</button>
+                            <button class="btn-secondary bg-superdark hover:bg-secondary-dark inline xl:hidden mt-3" @click="openCOO()">{{cooButtonText}}</button>
                         </div>
                     </div>
 

@@ -7,7 +7,7 @@
             <div class="flex max-w-8xl">
                 <div class="p-10">
                     <div
-                        class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-blue-superdark"
+                        class="max-w-8xl min-w-7xl rounded-lg overflow-hidden shadow-lg bg-superdark"
                     >
                         <div class="px-8 pt-8 pb-4">
                             <h1 class="text-white text-3xl">Write a review</h1>

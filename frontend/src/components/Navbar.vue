@@ -1,8 +1,8 @@
 <template>
     <body>
-        <nav class="flex bg-blue-superdark col-span-1 justify-between sm:h-20">
+        <nav class="flex bg-superdark col-span-1 justify-between sm:h-20">
             <div class="block py-2">
-                <div class="bg-blue-superdark mx-auto px-2 sm:px-6 lg:px-8 py-0">
+                <div class="bg-superdark mx-auto px-2 sm:px-6 lg:px-8 py-0">
                     <div class="relative flex items-center justify-between h-16">
                         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                             <button type="button" @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 active:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -40,7 +40,7 @@
             </div>
         </nav>
 
-        <div class="sm:hidden text-white bg-blue-superdark" id="mobile-menu">
+        <div class="sm:hidden text-white bg-superdark" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1" :class="{'hidden' : !open}">
                 <router-link :to="{ name: 'Home' }" class="nav-link block" exact @click.native="open = false">Home</router-link>
                 <router-link :to="{ name: 'Store' }" class="nav-link block" exact @click.native="open = false">Store</router-link>

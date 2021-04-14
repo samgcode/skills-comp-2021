@@ -1,5 +1,9 @@
- - write a list of reviews to be chaged on the day
- - change font for body text
+ - add light and dark primary colors
+ - add variables for colors/icons search in project
+ - change colors to something else
+ - make populate images into sperate script
+ - lookup favicon not working on server
+ - router not working on server (reload)
 
 Before the day:
 
@@ -10,13 +14,11 @@ Things to change:
  - colors
    - make sure to chage stars, icons, loaders, etc
  - images
- - reviews
- - items
  - db images
+ - items
+ - reviews
 
 Before the end:
- - remove artificial loading time
- - check every page on every breakpoint
  - build
  - submit files from dist folder
  - check uploaded website is the newest version
