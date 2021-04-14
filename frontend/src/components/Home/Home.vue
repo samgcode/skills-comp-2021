@@ -8,7 +8,7 @@
                     <h2 class="text-3xl text-gray-500 pt-5">Doing the job right</h2>
                     <div class="mt-6">
                         <router-link :to="{ name: 'About' }" class="btn-primary">About us</router-link>
-                        <router-link :to="{ name: 'Store' }" class="ml-4 btn-secondary">Store</router-link>
+                        <router-link :to="{ name: 'Store' }" class="ml-4 btn-secondary">Services</router-link>
                     </div>
                 </div>
                 <lazy-image :name="'nice_backyard'" :classes="'object-contain h-96 lg:pt-0 pt-4'" data-aos="fade"/>
@@ -41,8 +41,8 @@
                         my many questions. His crew was always polite and cleaned up the site each day before they left. I highly recommend them if you are considering a new deck for your home.”
                     </p>
                     <h2 class="text-md" data-aos="fade-right">— Liz O'Brien</h2>
-                    <!-- <button class="btn-secondary mt-5">See more reviews</button> -->
-                    <review-modal></review-modal>
+                    <button class="btn-secondary mt-5" @click="modalOpen = !modalOpen">See more reviews</button>
+                    <review-modal :open="modalOpen"></review-modal>
                 </div>
             </div>
         </div>
@@ -71,5 +71,10 @@ export default {
         StoreLocations,
         ReviewModal
     },
+    data() {
+        return {
+            modalOpen: false
+        }
+    }
 }
 </script>

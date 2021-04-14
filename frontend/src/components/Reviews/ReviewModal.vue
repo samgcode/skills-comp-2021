@@ -1,6 +1,5 @@
 <template>
     <div>
-        <button class="btn-secondary mt-5" @click="showModal()">See more reviews</button>
         <review-display :params="reviewParams" @close="closeModal" />
     </div>
 </template>
@@ -15,7 +14,7 @@ export default {
     components: { ReviewDisplay },
     name: 'ReviewModal',
     props: {
-
+        open: Boolean
     },
     data() {
         return {
@@ -25,15 +24,17 @@ export default {
                 reviews: [],
                 showError: false,
                 error: {},
-                loading: false
+                loading: false,
             }
         }
     },
     methods: {
         showModal() {
-            this.reviewParams.hasReviews = false
-            this.reviewParams.showReviews = true
-            this.displayReviews()
+            if(this.open) {
+                this.reviewParams.hasReviews = false
+                this.reviewParams.showReviews = true
+                this.displayReviews()
+            }
         },
         async displayReviews() {
             this.reviewParams.reviews = await reviewService.getReviews()
@@ -50,5 +51,10 @@ export default {
             this.reviewParams.reviewsLoading = true
         },
     },
+    watch: {
+        open: function() {
+            this.showModal()
+        }
+    }
 }
 </script>

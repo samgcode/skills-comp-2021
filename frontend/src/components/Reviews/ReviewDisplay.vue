@@ -43,10 +43,7 @@
                                             <div class="pt-5 sm:pl-9">  
                                                 <div class="max-w-sm w-96 rounded-lg overflow-hidden shadow-lg bg-white border-2">
                                                     <div class="px-4 py-4">
-                                                        <h1 class="text-xl">No reviews for this item</h1>
-                                                        <p class="text-gray-500 text-md">
-                                                            You can submit one on the store page
-                                                        </p>
+                                                        <h1 class="text-xl">No reviews at this time</h1>
                                                     </div>
                                                 </div>
                                             </div>
