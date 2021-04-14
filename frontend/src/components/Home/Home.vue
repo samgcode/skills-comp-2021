@@ -8,7 +8,7 @@
                     <h2 class="text-3xl text-gray-500 pt-5">Doing the job right</h2>
                     <div class="mt-6">
                         <router-link :to="{ name: 'About' }" class="btn-primary">About us</router-link>
-                        <router-link :to="{ name: 'Store' }" class="ml-4 btn-secondary">Store</router-link>
+                        <!-- <router-link :to="{ name: 'Store' }" class="ml-4 btn-secondary">Store</router-link> -->
                     </div>
                 </div>
                 <lazy-image :name="'nice_backyard'" :classes="'object-contain h-96 lg:pt-0 pt-4'" data-aos="fade"/>
@@ -63,7 +63,7 @@ import StoreLocations from '@/components/Home/StoreLocations'
 
 export default {
     name: 'Home',
-    title: 'RapidAir',
+    title: 'GreenThumb',
     components: {
         LazyImage,
         StoreLocations

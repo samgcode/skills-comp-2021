@@ -59,7 +59,7 @@
                             and communicates every step of the way to ensure your expectations are met.
                         </p>
                     </div>
-                    <lazy-image :name="'guy_standing_mountain'" :classes="'sm:h-96 mb-5 mx-auto'" data-aos="slide-right"/>
+                    <lazy-image :name="'laying_sod_2'" :classes="'sm:h-96 mb-5 mx-auto'" data-aos="slide-right"/>
                 </div>
             </div>
         </div>
