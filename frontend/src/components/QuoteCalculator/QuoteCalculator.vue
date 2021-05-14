@@ -86,10 +86,13 @@ export default {
         async calculate() {   
             console.log(this.items)  
             this.validate()
+            console.log(this.items)  
             this.items.forEach(item => {
-                let itemPrice = parseInt(item.quatity) * parseInt(item.price)
-                console.log(parseInt(item.quatity))
-                this.totalPrice += itemPrice
+                if(item.quantity) {
+                    let itemPrice = parseInt(item.quantity) * parseInt(item.price)
+                    console.log(parseInt(item.quantity))
+                    this.totalPrice += itemPrice
+                }
             });
         },
         validate() {
